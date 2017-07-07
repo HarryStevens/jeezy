@@ -32,7 +32,7 @@ Javascript has many [built-in methods for manipulating arrays](https://developer
 * [Arrays: Transformations](#array-transformations)
 * [Arrays: Other](#array-other)
 ### Strings
-Javascript has many [built-in methods for manipulating strings](http://www.w3schools.com/jsref/jsref_obj_string.asp). These functions are meant to supplement those.
+Javascript has many [built-in methods for manipulating strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). These functions are meant to supplement those.
 * [Strings: Cases](#string-cases)
 * [Strings: Numbers](#string-numbers)
 * [Strings: Queries](#string-queries)
