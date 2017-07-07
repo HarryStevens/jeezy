@@ -1,0 +1,2 @@
+# jeezy
+Make JavaScript easier.
