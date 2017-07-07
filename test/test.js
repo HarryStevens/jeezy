@@ -1,9 +1,9 @@
 "use strict";
 
 var expect = require("chai").expect;
-var jsz = require("../lib/jsz");
-var strings = jsz.str;
-var arrays = jsz.arr;
+var jz = require("../lib/jeezy");
+var strings = jz.str;
+var arrays = jz.arr;
 
 var arr = [1,2,3,4,5,6,7,8,9,10];
 
@@ -13,7 +13,7 @@ var testTags = "<span style='color:red'><i>Hello</i> <b>world</b>!</span>";
 var testSentence = "The quick brown fox jumps over the lazy dog";
 var testTitle = "new rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data";
 
-describe("#jsz", function() {
+describe("#jeezy", function() {
 
 	/*
 	/ ARRAY TESTS

@@ -1,4 +1,4 @@
-# jeezy [![Build Status](https://travis-ci.org/HarryStevens/jz.svg?branch=master)](https://travis-ci.org/HarryStevens/jsz) [![Coverage Status](https://coveralls.io/repos/github/HarryStevens/jsz/badge.svg)](https://coveralls.io/github/HarryStevens/jsz)
+# jeezy
 *jeezy* is a JavaScript library for manipulating strings and arrays. Think of it as a portmanteau of "JavaScript" and "easy".
 
 ## Installation

@@ -1,15 +1,15 @@
 {
-  "name": "jsz",
+  "name": "jeezy",
   "version": "1.2.0",
   "description": "Make JavaScript easier.",
-  "main": "lib/jsz.js",
+  "main": "lib/jeezy.js",
   "scripts": {
     "test": "mocha --reporter spec",
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarryStevens/jsz.git"
+    "url": "git+https://github.com/HarryStevens/jeezy.git"
   },
   "keywords": [
     "JavaScript"
@@ -17,9 +17,9 @@
   "author": "Harry Stevens <harryjosephstevens@gmail.com> (http://harryjstevens.com/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HarryStevens/jsz/issues"
+    "url": "https://github.com/HarryStevens/jeezy/issues"
   },
-  "homepage": "https://github.com/HarryStevens/jsz#readme",
+  "homepage": "https://github.com/HarryStevens/jeezy#readme",
   "engines": {
     "node": ">=4.2.4"
   },
