@@ -19,6 +19,15 @@ describe("#jeezy", function() {
 	/ ARRAY TESTS
 	*/
 
+	it("should return unique values of an array", function(){
+		var a = arrays.unique([1,2,4,2,3,6,1,5]);
+		var b = arrays.unique(["Apple", "Pear", "Apple"]);
+		expect(a.length).to.equal(6);
+		expect(b.length).to.equal(2);
+		expect(b[0]).to.equal("Apple");
+		expect(b[1]).to.equal("Pear");
+	});
+
   it("should calculate the average of an array of numbers", function(){
       var a = arrays.average([10,20]);
       expect(a).to.equal(15);
@@ -155,7 +164,7 @@ describe("#jeezy", function() {
 		expect(l).to.equal("1,34,51,22,345.235");
   });
 
-  it("should prepend zeros to a string until it is n digits long, unless it is already longer", function(){
+  it("should prepend zeros to a string until it is n digits long, unless it is already as long or longer", function(){
   	var m0 = strings.numberPrependZeros(1234, 4); // "1234"
 		var m1 = strings.numberPrependZeros(123, 4); // "0123"
 		var m2 = strings.numberPrependZeros(12345, 4); // "12345"

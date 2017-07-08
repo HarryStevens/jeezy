@@ -102,6 +102,10 @@ Shuffles an array.
 
 Sorts an array of numbers.
 
+<a name="array-unique" href="#array-unique">#</a> jz.arr.<b>unique</b>(<i>array</i>)
+
+Returns unique values of an array.
+
 
 ### <a name="array-other" href="#array-other">Arrays: Other</a>
 
@@ -183,7 +187,7 @@ Adds commas to a number string for thousands, lakhs, crores, and so on. This is 
 
 <a name="string-numberPrependZeros" href="#string-numberPrependZeros">#</a> jz.str.<b>numberPrependZeros</b>(<i>string</i>, <i>number</i>)
 
-Adds zeros before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already longer than the number of characters.
+Adds zeros before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already the same length or longer than the number of characters.
 ```js
 jz.str.numberPrependZeros("1234", 6); // "001234"
 ```
