@@ -20,6 +20,19 @@ describe("#jeezy", function() {
 	/ ARRAY TESTS
 	*/
 
+	it("should sort an array of objects by the values of an attribute", function(){
+		var t = arrays.pivot(json, "value");
+		
+		var x = arrays.sortBy(t, "count");
+		var y = arrays.sortBy(t, "count", "asc");
+		var z = arrays.sortBy(t, "count", "desc");
+
+		expect(x[0].value).to.equal(3);
+		expect(y[0].value).to.equal(3);
+		expect(z[0].count).to.equal(2);
+	
+	});
+
 	it("should pivot an array of objects around an attribute", function(){
 		var t = arrays.pivot(json, "value");
 		expect(t.length).to.equal(3);

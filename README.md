@@ -116,6 +116,17 @@ jz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
 
 Shuffles an array.
 
+<a name="array-sortBy" href="#array-sortBy">#</a> jz.arr.<b>sortBy</b>(<i>array</i>)
+
+Sorts an array of objects by the values of an attribute.
+
+```js
+var json = [ { value: "a", count: 2 }, { value: "b", count: 2 }, { value: "c", count: 1 } ]
+jz.arr.sortBy(json, "count"); // [ { value: "c", count: 1 }, { value: "a", count: 2 }, { value: "b", count: 2 } ]
+jz.arr.sortBy(json, "count", "asc"); // [ { value: "c", count: 1 }, { value: "a", count: 2 }, { value: "b", count: 2 } ]
+jz.arr.sortBy(json, "count", "desc"); // [ { value: "b", count: 2 }, { value: "a", count: 2 }, { value: "c", count: 1 } ]
+```
+
 <a name="array-sortNumbers" href="#array-sortNumbers">#</a> jz.arr.<b>sortNumbers</b>(<i>array</i>)
 
 Sorts an array of numbers.
