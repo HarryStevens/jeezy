@@ -100,7 +100,7 @@ Pivots an array of objects around the unique values of an attribute. Returns the
 
 ```js
 var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 } ];
-jsz.arr.pivot(json, "value"); // [ { value: 1, count: 2 }, { value: 2, count: 2 }, { value: 3, count: 1 } ]
+jz.arr.pivot(json, "value"); // [ { value: 1, count: 2 }, { value: 2, count: 2 }, { value: 3, count: 1 } ]
 ```
 
 <a name="array-pluck" href="#array-pluck">#</a> jz.arr.<b>pluck</b>(<i>array</i>, <i>string</i>)
@@ -109,7 +109,7 @@ Returns all the values of a specified attribute from an array of objects.
 
 ```js
 var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 } ];
-jsz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
+jz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
 ```
 
 <a name="array-shuffle" href="#array-shuffle">#</a> jz.arr.<b>shuffle</b>(<i>array</i>)
