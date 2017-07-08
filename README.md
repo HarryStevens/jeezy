@@ -33,6 +33,11 @@ Javascript has many [built-in methods for manipulating arrays](https://developer
 * [Arrays: Queries](#array-queries)
 * [Arrays: Transformations](#array-transformations)
 * [Arrays: Other](#array-other)
+
+### Numbers
+Javascript has many [built-in methods for manipulating numbers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number). These functions are meant to supplement those.
+* [Numbers: Other](#number-other)
+
 ### Strings
 Javascript has many [built-in methods for manipulating strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). These functions are meant to supplement those.
 * [Strings: Cases](#string-cases)
@@ -143,6 +148,16 @@ Miscellaneous array functions.
 <a name="array-random" href="#array-random">#</a> jz.arr.<b>random</b>(<i>array</i>)
 
 Returns a random item from an array.
+
+---
+
+### <a name="number-other" href="#number-other">Numbers: Other</a>
+
+Miscellaneous number functions.
+
+<a name="number-randBetween" href="#number-randBetween">#</a> jz.num.<b>randBetween</b>(<i>min</i>, <i>max</i>)
+
+Returns a random integer between two specified integers. If the second integer is less than the first, returns the first.
 
 ---
 

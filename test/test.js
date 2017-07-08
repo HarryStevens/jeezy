@@ -4,6 +4,7 @@ var expect = require("chai").expect;
 var jz = require("../lib/jeezy");
 var strings = jz.str;
 var arrays = jz.arr;
+var num = jz.num;
 
 var arr = [1,2,3,4,5,6,7,8,9,10];
 var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 } ];
@@ -14,7 +15,7 @@ var testTags = "<span style='color:red'><i>Hello</i> <b>world</b>!</span>";
 var testSentence = "The quick brown fox jumps over the lazy dog";
 var testTitle = "new rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data";
 
-describe("#jeezy", function() {
+describe("#array", function() {
 
 	/*
 	/ ARRAY TESTS
@@ -98,8 +99,25 @@ describe("#jeezy", function() {
   	expect(y.length).to.equal(3);
   	expect(y[0]).to.equal(1);
   });
-  
 
+});
+
+describe("#number", function(){
+
+  /*
+  / NUMBER TESTS
+  */
+
+  it("should generate a random number between two specified numbers", function(){
+  	var a = num.randBetween(10, 100);
+  	expect(a).to.be.at.least(10);
+  	expect(a).to.be.at.most(100);
+  });
+
+});
+
+describe("#string", function(){
+	
 	/*
 	/ STRING TESTS
 	*/
