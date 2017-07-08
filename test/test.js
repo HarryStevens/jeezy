@@ -6,6 +6,7 @@ var strings = jz.str;
 var arrays = jz.arr;
 
 var arr = [1,2,3,4,5,6,7,8,9,10];
+var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 } ];
 
 var test = "Hello world!";
 var testNum = "12,345,679.312";
@@ -18,6 +19,19 @@ describe("#jeezy", function() {
 	/*
 	/ ARRAY TESTS
 	*/
+
+	it("should pivot an array of objects around an attribute", function(){
+		var t = arrays.pivot(json, "value");
+		expect(t.length).to.equal(3);
+		expect(t[2].value).to.equal(3);
+		expect(t[2].count).to.equal(1);
+	});	
+
+	it("should pluck values from an array of objects", function(){
+		var t = arrays.pluck(json, "value");
+		expect(t.length).to.equal(5);
+		expect(t[2]).to.equal(3);
+	});
 
 	it("should return unique values of an array", function(){
 		var a = arrays.unique([1,2,4,2,3,6,1,5]);

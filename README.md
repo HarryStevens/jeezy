@@ -1,7 +1,7 @@
 # jeezy [![Build Status](https://travis-ci.org/HarryStevens/jeezy.svg?branch=master)](https://travis-ci.org/HarryStevens/jeezy) [![Coverage Status](https://coveralls.io/repos/github/HarryStevens/jeezy/badge.svg?branch=master)](https://coveralls.io/github/HarryStevens/jeezy?branch=master)
-<b>jeezy</b>  is a JavaScript library for manipulating strings and arrays.
-
 JavaScript. Easy.
+
+<b>jeezy</b> is a JavaScript library for manipulating data.
 
 ## Installation
 
@@ -92,6 +92,24 @@ Flattens an array of arrays into a single array.
 ```js
 var arrays = [[1],[2],[3]];
 jz.arr.flatten(arrays); // [1, 2, 3]
+```
+
+<a name="array-pivot" href="#array-pivot">#</a> jz.arr.<b>pivot</b>(<i>array</i>, <i>string</i>)
+
+Pivots an array of objects around the unique values of an attribute. Returns the unique values and the count of how many times they each appears in the original array.
+
+```js
+var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 } ];
+jsz.arr.pivot(json, "value"); // [ { value: 1, count: 2 }, { value: 2, count: 2 }, { value: 3, count: 1 } ]
+```
+
+<a name="array-pluck" href="#array-pluck">#</a> jz.arr.<b>pluck</b>(<i>array</i>, <i>string</i>)
+
+Returns all the values of a specified attribute from an array of objects.
+
+```js
+var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 } ];
+jsz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
 ```
 
 <a name="array-shuffle" href="#array-shuffle">#</a> jz.arr.<b>shuffle</b>(<i>array</i>)
