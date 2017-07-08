@@ -84,9 +84,15 @@ describe("#array", function() {
 		expect(arrays.median([1,6,3,9,28])).to.equal(6);
   });
 
-  it("should sort an array of numbers", function(){
+  it("should sort an array of numbers in ascending order", function(){
     var shuffled = arrays.shuffle(arr);
 		expect(arrays.sortNumbers(shuffled)).to.equal(arr);
+    expect(arrays.sortNumbers(shuffled, "desc")).to.equal(arr.reverse());
+  });
+
+  it("should sort an array of numbers in descending order", function(){
+    var shuffled = arrays.shuffle(arr);
+    expect(arrays.sortNumbers(shuffled, "desc")).to.equal(arr.reverse());
   });
 
   it("should calculate the sum of an array of numbers", function(){
