@@ -121,7 +121,7 @@ jz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
 
 Shuffles an array.
 
-<a name="array-sortBy" href="#array-sortBy">#</a> jz.arr.<b>sortBy</b>(<i>array</i>)
+<a name="array-sortBy" href="#array-sortBy">#</a> jz.arr.<b>sortBy</b>(<i>array</i>[, order])
 
 Sorts an array of objects by the values of an attribute. You can specify the order of the sort as descending or ascending by using "desc" or "asc" as the optional third argument. If there is no third argument, the sort order defaults to ascending.
 
