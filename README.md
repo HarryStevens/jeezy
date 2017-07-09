@@ -132,9 +132,9 @@ jz.arr.sortBy(json, "count", "asc"); // [ { value: "c", count: 1 }, { value: "a"
 jz.arr.sortBy(json, "count", "desc"); // [ { value: "b", count: 2 }, { value: "a", count: 2 }, { value: "c", count: 1 } ]
 ```
 
-<a name="array-sortNumbers" href="#array-sortNumbers">#</a> jz.arr.<b>sortNumbers</b>(<i>array</i>)
+<a name="array-sortNumbers" href="#array-sortNumbers">#</a> jz.arr.<b>sortNumbers</b>(<i>array</i>[, <i>order</i>])
 
-Sorts an array of numbers.
+Sorts an array of numbers in ascending order by default. For descending order, pass "desc" as <i>order</i>.
 
 <a name="array-unique" href="#array-unique">#</a> jz.arr.<b>unique</b>(<i>array</i>)
 
