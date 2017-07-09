@@ -87,6 +87,7 @@ describe("#array", function() {
   it("should sort an array of numbers in ascending order", function(){
     var shuffled = arrays.shuffle(arr);
 		expect(arrays.sortNumbers(shuffled)).to.equal(arr);
+		expect(arrays.sortNumbers(shuffled, "asc")).to.equal(arr);
     expect(arrays.sortNumbers(shuffled, "desc")).to.equal(arr.reverse());
   });
 
