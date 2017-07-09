@@ -15,6 +15,7 @@ var testTags = "<span style='color:red'><i>Hello</i> <b>world</b>!</span>";
 var testSentence = "The quick brown fox jumps over the lazy dog";
 var testTitle = "new rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data";
 var testTitle0 = "this is a title: and this is a subtitle" ;
+var testTitle1 = "M'ADOO F.B.I ARRANGES TOUR OF THE WEST TO PUSH THE LOAN; Plans Strong Appeals to Patriotism to Loosen Nation's...";
 
 describe("#array", function() {
 
