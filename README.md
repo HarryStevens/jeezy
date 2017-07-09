@@ -101,7 +101,7 @@ jz.arr.flatten(arrays); // [1, 2, 3]
 
 <a name="array-pivot" href="#array-pivot">#</a> jz.arr.<b>pivot</b>(<i>array</i>, <i>string</i>)
 
-Pivots an array of objects around the unique values of an attribute. Returns the unique values and the count of how many times they each appears in the original array.
+Pivots an array of objects around the unique values of an attribute. Returns the unique values and the count of how many times each appears in the original array.
 
 ```js
 var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 } ];
@@ -123,7 +123,7 @@ Shuffles an array.
 
 <a name="array-sortBy" href="#array-sortBy">#</a> jz.arr.<b>sortBy</b>(<i>array</i>)
 
-Sorts an array of objects by the values of an attribute.
+Sorts an array of objects by the values of an attribute. You can specify the order of the sort as descending or ascending by using "desc" or "asc" as the optional third argument. If there is no third argument, the sort order defaults to ascending.
 
 ```js
 var json = [ { value: "a", count: 2 }, { value: "b", count: 2 }, { value: "c", count: 1 } ]
