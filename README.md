@@ -264,6 +264,12 @@ jz.str.includes("Hello world", "WO", false); // false
 
 Tests whether a string contains only capital letters. Ignores symbols and numbers.
 
+```js
+jz.str.isAllCaps("JEEZY"); // true
+jz.str.isAllCaps("JEE-ZY"); // true
+jz.str.isAllCaps("JEEZy"); // false
+```
+
 <a name="string-isAllDigits" href="#string-isAllDigits">#</a> jz.str.<b>isAllDigits</b>(<i>string</i>)
 
 Tests whether a string contains only digits.
