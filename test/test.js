@@ -333,10 +333,15 @@ describe("#string", function(){
 		var ah1 = strings.toTitleCase("javascript: a beginner's guide to the language of the web"); // "Javascript: A Beginner's Guide to the Language of the Web"
 		var ah2 = strings.toTitleCase("james comey to remain on as FBI director"); // "James Comey to Remain on as FBI Director"
 		var ah3 = strings.toTitleCase(testTitle); // "New Rules Grant F.B.I., DEA & CIA Access to 'Raw' NSA Surveillance Data"
+    var ah4 = strings.toTitleCase("i am an animal. an idiot. an amazing man.")//to test multiple sentences. when sentences start with a preposition/conjunction/article.
+    var ah5 = strings.toTitleCase("i am from the F.B.I.. an amazingly creepy and an amazingly weird organisation.")
+
 		expect(ah0).to.equal("The Quick Brown Fox Jumps Over the Lazy Dog");
 		expect(ah1).to.equal("Javascript: A Beginner's Guide to the Language of the Web");
 		expect(ah2).to.equal("James Comey to Remain on as FBI Director");
 		expect(ah3).to.equal("New Rules Grant F.B.I., DEA & CIA Access to 'Raw' NSA Surveillance Data");
+    expect(ah4).to.equal("I Am an Animal. An Idiot. An Amazing Man.");
+    expect(ah5).to.equal("I Am from the F.B.I.. An Amazingly Creepy and an Amazingly Weird Organisation.")
   });	
 
 });
