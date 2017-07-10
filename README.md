@@ -173,9 +173,15 @@ Transforms a string into camel case.
 jz.str.toCamelCase("Hello world!"); // "helloWorld"
 ```
 
-<a name="string-toSentenceCase" href="#string-toSentenceCase">#</a> jz.str.<b>toSentenceCase</b>(<i>string</i>)
+<a name="string-toSentenceCase" href="#string-toSentenceCase">#</a> jz.str.<b>toSentenceCase</b>(<i>string[, boolean]</i>)
 
-Capitalizes the first letter of the first word in a string.
+Capitalizes the first letter of the first word in a string. Defaults to ignoring all-caps words. Set the second argument to `true` to include them.
+
+```js
+var string = "new rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data";
+jz.str.toSentenceCase(string); // "New rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data"
+jz.str.toSentenceCase(string, true); // "New rules grant f.b.i., dea & cia access to 'raw' nsa surveillance data"
+```
 
 <a name="string-toSlugCase" href="#string-toSlugCase">#</a> jz.str.<b>toSlugCase</b>(<i>string</i>)
 
@@ -195,7 +201,15 @@ jz.str.toSnakeCase("Hello world!"); // "hello_world"
 
 <a name="string-toStartCase" href="#string-toStartCase">#</a> jz.str.<b>toStartCase</b>(<i>string</i>)
 
-Capitalizes the first letter of every word in a string.
+Capitalizes the first letter of every word in a string. Defaults to ignoring all-caps words. Set the second argument to `true` to include them.
+
+```js
+jz.str.toStartCase("Hello world!"); // "Hello World!";
+
+var string = "new rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data";
+jz.str.toStartCase(string); // "New Rules Grant F.B.I., DEA & CIA Access To 'Raw' NSA Surveillance Data"
+jz.str.toStartCase(string, true); // "New Rules Grant F.b.i., Dea & Cia Access To 'Raw' Nsa Surveillance Data"
+```
 
 <a name="string-toTitleCase" href="#string-toTitleCase">#</a> jz.str.<b>toTitleCase</b>(<i>string</i>[, <i>array</i>, <i>boolean</i>])
 
@@ -238,7 +252,7 @@ jz.str.numberPrependZeros("1234", 6); // "001234"
 
 ### <a name="string-queries" href="#string-queries">Strings: Queries</a>
 
-Functions for testing strings for certain properties. Will return booleans.
+Functions for testing strings for certain properties.
 
 <a name="string-endsWith" href="#string-endsWith">#</a> jz.str.<b>endsWith</b>(<i>string</i>, <i>substring</i>[, <i>boolean</i>])
 

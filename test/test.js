@@ -312,11 +312,15 @@ describe("#string", function(){
   });	
 
 	it("should convert a string to sentence case", function(){
-	  var ad = strings.toSentenceCase(testTitle); // "New rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data"
-		expect(ad).to.equal("New rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data");
+	  var ad = strings.toSentenceCase(testTitle, true); // "New rules grant f.b.i., dea & cia access to 'raw' nsa surveillance data"
+	  var ad1 = strings.toSentenceCase(testTitle); // "New rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data"
+	  var ad2 = strings.toSentenceCase(testTitle); // "New rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data"
+		expect(ad).to.equal("New rules grant f.b.i., dea & cia access to 'raw' nsa surveillance data");
+		expect(ad1).to.equal("New rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data");
+		expect(ad2).to.equal("New rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data");
   });
 
-	it("should convert a string to sentence case", function(){
+	it("should convert a string to slug case", function(){
 	  var ae = strings.toSlugCase(test); // "hello-world"
 		expect(ae).to.equal("hello-world");
   });
@@ -328,7 +332,11 @@ describe("#string", function(){
 
 	it("should convert a string to start case", function(){
 	  var ag = strings.toStartCase(test); // "Hello World!"
+	  var ag0 = strings.toStartCase(testTitle);
+	  var ag1 = strings.toStartCase(testTitle, true);
 		expect(ag).to.equal("Hello World!");
+		expect(ag0).to.equal("New Rules Grant F.B.I., DEA & CIA Access To 'Raw' NSA Surveillance Data");
+		expect(ag1).to.equal("New Rules Grant F.b.i., Dea & Cia Access To 'Raw' Nsa Surveillance Data");
   });
 
 	it("should convert a string to title case", function(){
