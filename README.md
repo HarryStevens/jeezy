@@ -13,7 +13,7 @@ npm install jeezy --save
 var jz = require("jeezy");
 ```
 
-### Vanilla JS
+### Web browser
 You can use the CDN from unpkg.
 ```html
 <script src="https://unpkg.com/jeezy/lib/jeezy.js"></script>
@@ -277,6 +277,11 @@ Tests whether a string contains only digits.
 <a name="string-isAllLower" href="#string-isAllLower">#</a> jz.str.<b>isAllLower</b>(<i>string</i>)
 
 Tests whether a string contains only lowercase letters. Ignores symbols and numbers.
+
+```js
+jz.str.isAllLower("jeezy"); // true
+jz.str.isAllLower("jee-zy"); // true
+jz.str.isAllLower("Jeezy"); // false
 
 <a name="string-startsWith" href="#string-startsWith">#</a> jz.str.<b>startsWith</b>(<i>string</i>, <i>substring</i>[, <i>boolean</i>])
 
