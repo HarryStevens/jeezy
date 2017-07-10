@@ -282,6 +282,7 @@ Tests whether a string contains only lowercase letters. Ignores symbols and numb
 jz.str.isAllLower("jeezy"); // true
 jz.str.isAllLower("jee-zy"); // true
 jz.str.isAllLower("Jeezy"); // false
+```
 
 <a name="string-startsWith" href="#string-startsWith">#</a> jz.str.<b>startsWith</b>(<i>string</i>, <i>substring</i>[, <i>boolean</i>])
 
