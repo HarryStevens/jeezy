@@ -175,7 +175,7 @@ jz.str.toCamelCase("Hello world!"); // "helloWorld"
 
 <a name="string-toSentenceCase" href="#string-toSentenceCase">#</a> jz.str.<b>toSentenceCase</b>(<i>string[, boolean]</i>)
 
-Capitalizes the first letter of the first word in a string. Defaults to ignoring all-caps words. Set the second argument to `true` to include them.
+Capitalizes the first letter of the first word in a string. Defaults to ignoring capital letters after the first letter. Set the second argument to `true` to include them.
 
 ```js
 var string = "new rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data";
@@ -201,7 +201,7 @@ jz.str.toSnakeCase("Hello world!"); // "hello_world"
 
 <a name="string-toStartCase" href="#string-toStartCase">#</a> jz.str.<b>toStartCase</b>(<i>string</i>)
 
-Capitalizes the first letter of every word in a string. Defaults to ignoring all-caps words. Set the second argument to `true` to include them.
+Capitalizes the first letter of every word in a string. Defaults to ignoring capital letters after the first letter. Set the second argument to `true` to include them.
 
 ```js
 jz.str.toStartCase("Hello world!"); // "Hello World!";
