@@ -131,6 +131,12 @@ describe("#string", function(){
 	/ STRING TESTS
 	*/
 
+	it("should return the first letter of a string", function(){
+		expect(strings.firstLetter("Hello world!")).to.equal("H");
+		expect(strings.firstLetter("!!Hello world!")).to.equal("H");
+		expect(strings.firstLetter("!")).to.equal(null);
+	});
+
   it("should count the number of times a string occurs in a substring", function(){
       var a = strings.count(test, "l");
       expect(a).to.equal(3);

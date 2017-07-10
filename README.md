@@ -264,6 +264,16 @@ jz.str.endsWith("Hello world", "LD", true); // true
 jz.str.endsWith("Hello world", "LD", false); // false
 ```
 
+<a name="string-firstLetter" href="#string-firstLetter">#</a> jz.str.<b>firstLetter</b>(<i>string</i>)
+
+Returns the first letter of a string. If there are no letters in the string, returns `null`.
+
+```js
+jz.str.firstLetter("Hello world!"); // "H"
+jz.str.firstLetter("!!Hello world!"); // "H"
+jz.str.firstLetter("!"); // null
+```
+
 <a name="string-includes" href="#string-includes">#</a> jz.str.<b>includes</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
 
 Tests whether a string includes a substring. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
