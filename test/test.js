@@ -340,7 +340,7 @@ describe("#string", function(){
     var ah5 = strings.toTitleCase("i am from the F.B.I.. an amazingly creepy and an amazingly weird organisation.")
     var ah6 = strings.toTitleCase(testTitle0); // "This Is a Title: And This Is a Subtitle"
 
-		expect(ah0).to.equal("The Quick Brown Fox Jumps Over the Lazy Dog");
+		expect(ah0).to.equal("The Quick Brown Fox Jumps over the Lazy Dog");
 		expect(ah1).to.equal("Javascript: A Beginner's Guide to the Language of the Web");
 		expect(ah2).to.equal("James Comey to Remain on as FBI Director");
 		expect(ah3).to.equal("New Rules Grant F.B.I., DEA & CIA Access to 'Raw' NSA Surveillance Data");
