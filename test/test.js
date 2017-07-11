@@ -40,6 +40,10 @@ describe("#array", function() {
 		expect(x[0].value).to.equal(3);
 		expect(y[0].value).to.equal(3);
 		expect(z[0].count).to.equal(2);
+
+		var z0 = arrays.sortBy(json, "name");
+
+		expect(z0[1].name).to.equal("Jake");
 	
 	});
 
