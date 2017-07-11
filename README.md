@@ -1,7 +1,7 @@
 # jeezy [![Build Status](https://travis-ci.org/HarryStevens/jeezy.svg?branch=master)](https://travis-ci.org/HarryStevens/jeezy) [![Coverage Status](https://coveralls.io/repos/github/HarryStevens/jeezy/badge.svg?branch=master)](https://coveralls.io/github/HarryStevens/jeezy?branch=master)
 JavaScript. Easy.
 
-<b>jeezy</b> is a JavaScript library for manipulating data.
+<b>jeezy</b> is a JavaScript library for manipulating data. It provides lots of useful functions and has no dependencies, so it won't add a lot of code to your project.
 
 ## Installation
 
@@ -44,7 +44,6 @@ Javascript has many [built-in methods for manipulating strings](https://develope
 * [Strings: Numbers](#string-numbers)
 * [Strings: Queries](#string-queries)
 * [Strings: Transformations](#string-transformations)
-* [Strings: Other](#string-other)
 
 ---
 
@@ -254,6 +253,10 @@ jz.str.numberPrependZeros("1234", 6); // "001234"
 
 Functions for testing strings for certain properties.
 
+<a name="string-count" href="#string-count">#</a> jz.str.<b>count</b>(<i>string</i>, <i>substring</i>)
+
+Counts the number of times a substring occurs in a string.
+
 <a name="string-endsWith" href="#string-endsWith">#</a> jz.str.<b>endsWith</b>(<i>string</i>, <i>substring</i>[, <i>boolean</i>])
 
 Tests whether a string ends with a substring. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
@@ -262,6 +265,16 @@ Tests whether a string ends with a substring. Defaults to case sensitive, but yo
 jz.str.endsWith("Hello world", "LD"); // false
 jz.str.endsWith("Hello world", "LD", true); // true
 jz.str.endsWith("Hello world", "LD", false); // false
+```
+
+<a name="string-firstLetter" href="#string-firstLetter">#</a> jz.str.<b>firstLetter</b>(<i>string</i>)
+
+Returns the first letter of a string. If there are no letters in the string, returns `null`.
+
+```js
+jz.str.firstLetter("Hello world!"); // "H"
+jz.str.firstLetter("!!Hello world!"); // "H"
+jz.str.firstLetter("!"); // null
 ```
 
 <a name="string-includes" href="#string-includes">#</a> jz.str.<b>includes</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
@@ -414,23 +427,6 @@ Randomly shuffles the characters of each word, but keeps the words in order. Use
 
 Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
 
-### <a name="string-other" href="#string-other">Strings: Other</a>
-
-Miscellaneous string functions.
-
-<a name="string-count" href="#string-count">#</a> jz.str.<b>count</b>(<i>string</i>, <i>substring</i>)
-
-Counts the number of times a substring occurs in a string.
-
-<a name="string-firstLetter" href="#string-firstLetter">#</a> jz.str.<b>firstLetter</b>(<i>string</i>)
-
-Returns the first letter of a string. If there are no letters in the string, returns `null`.
-
-```js
-jz.str.firstLetter("Hello world!"); // "H"
-jz.str.firstLetter("!!Hello world!"); // "H"
-jz.str.firstLetter("!"); // null
-```
 
 ## Tests
 ```bash
