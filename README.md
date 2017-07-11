@@ -131,6 +131,18 @@ jz.arr.sortBy(json, "count", "asc"); // [ { value: "c", count: 1 }, { value: "a"
 jz.arr.sortBy(json, "count", "desc"); // [ { value: "b", count: 2 }, { value: "a", count: 2 }, { value: "c", count: 1 } ]
 ```
 
+<a name="array-sortByMulti" href="#array-sortByMulti">#</a> jz.arr.<b>sortByMulti</b>(<i>array</i>, <i>array</i>)
+
+Sorts an array of objects by the values of multiple attributes. Pass the list of attributes as an array, and the function will execute the sorts in order. You can specify the order of a sort as descending or ascending by passing an array instead of a string, where the first item is the attribute and the second is the order, either "desc" or "asc".
+
+```js
+var json = [ { value: 1, name: "Bob" }, { value: 2, name: "Steve" }, { value: 3, name: "John" }, { value: 1, name: "Tim" }, { value: 2, name: "Jake" } ];
+jz.arr.sortByMulti(json, ["name", ["value", "desc"]]); // [ { value: 3, name: 'John' }, { value: 2, name: 'Jake' }, { value: 2, name: 'Steve' }, { value: 1, name: 'Tim' }, { value: 1, name: 'Bob' } ]
+// This will have the same output as:
+// var output = jz.arr.sortBy(json, "name");
+// output = jz.arr.sortBy(json, "value", "desc");
+```
+
 <a name="array-sortNumbers" href="#array-sortNumbers">#</a> jz.arr.<b>sortNumbers</b>(<i>array</i>[, <i>order</i>])
 
 Sorts an array of numbers in ascending order by default. For descending order, pass "desc" as <i>order</i>.

@@ -7,7 +7,7 @@ var arrays = jz.arr;
 var num = jz.num;
 
 var arr = [1,2,3,4,5,6,7,8,9,10];
-var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 } ];
+var json = [ { value: 1, name: "Bob" }, { value: 2, name: "Steve" }, { value: 3, name: "John" }, { value: 1, name: "Tim" }, { value: 2, name: "Jake" } ];
 
 var test = "Hello world!";
 var testNum = "12,345,679.312";
@@ -22,6 +22,13 @@ describe("#array", function() {
 	/*
 	/ ARRAY TESTS
 	*/
+
+	it("should sort by multiple attributes", function(){
+		var sort = arrays.sortByMulti(json, ["name", ["value", "desc"]]);
+		expect(sort[0].value).to.equal(3);
+		expect(sort[1].name).to.equal("Jake");
+		expect(sort[2].name).to.equal("Steve");
+	});
 
 	it("should sort an array of objects by the values of an attribute", function(){
 		var t = arrays.pivot(json, "value");
