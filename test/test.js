@@ -7,7 +7,7 @@ var arrays = jz.arr;
 var num = jz.num;
 
 var arr = [1,2,3,4,5,6,7,8,9,10];
-var json = [ { value: 1, name: "Bob" }, { value: 2, name: "Steve" }, { value: 3, name: "John" }, { value: 1, name: "Tim" }, { value: 2, name: "Jake" } ];
+var json = [ { value: 1, name: "Bob", age: 30 }, { value: 2, name: "Steve", age: 23 }, { value: 3, name: "John", age: 40 }, { value: 1, name: "Tim", age: 6 }, { value: 2, name: "Jake", age: 92 } ];
 
 var test = "Hello world!";
 var testNum = "12,345,679.312";
@@ -22,6 +22,13 @@ describe("#array", function() {
 	/*
 	/ ARRAY TESTS
 	*/
+
+	it("should delete a property or properties from every object in an array of objects", function(){
+		var a = arrays.removeProperty(json, "name");
+		var b = arrays.removeProperty(json, ["name", "age"])
+		expect(a[0].name).to.equal(undefined);
+		expect(b[0].age).to.equal(undefined);
+	});
 
 	it("should sort by multiple attributes", function(){
 		var sort = arrays.sortByMulti(json, ["name", ["value", "desc"]]);

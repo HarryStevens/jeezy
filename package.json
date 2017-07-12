@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --reporter spec",
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
-    "minify": "uglifyjs lib/jeezy.js -c -m -o lib/jeezy.min.js"
+    "minify": "uglifyjs lib/jeezy.js --comments -c -m -o lib/jeezy.min.js"
   },
   "repository": {
     "type": "git",

@@ -116,6 +116,16 @@ var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 
 jz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
 ```
 
+<a name="array-removeProperty" href="#array-removeProperty">#</a> jz.arr.<b>removeProperty</b>(<i>array</i>, <i>property string OR array of property strings</i>)
+
+Removes a property or properties from every object in an array of objects. The second argument can be a string or, if you want to remove multiple properties, an array of strings.
+
+```js
+var json = [ { value: 1, name: "Bob", age: 30 }, { value: 2, name: "Steve", age: 23 }, { value: 3, name: "John", age: 40 }, { value: 1, name: "Tim", age: 6 }, { value: 2, name: "Jake", age: 92 } ];
+jz.arr.removeProperty(json, "age"); // [ { value: 1, name: "Bob" }, { value: 2, name: "Steve" }, { value: 3, name: "John" }, { value: 1, name: "Tim" }, { value: 2, name: "Jake" } ]
+jz.arr.removeProperty(json, ["value", "age"]); // [ { name: "Bob" }, { name: "Steve" }, { name: "John" }, { name: "Tim" }, { name: "Jake" } ]
+```
+
 <a name="array-shuffle" href="#array-shuffle">#</a> jz.arr.<b>shuffle</b>(<i>array</i>)
 
 Shuffles an array.
