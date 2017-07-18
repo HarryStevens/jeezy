@@ -17,9 +17,6 @@ var testTitle = "new rules grant F.B.I., DEA & CIA access to 'raw' NSA surveilla
 var testTitle0 = "this is a title: and this is a subtitle" ;
 var testTitle1 = "M'ADOO F.B.I ARRANGES TOUR OF THE WEST TO PUSH THE LOAN; Plans Strong Appeals to Patriotism to Loosen Nation's...";
 
-
-console.log(u);
-
 describe("#array", function() {
 
 	/*
