@@ -116,6 +116,16 @@ var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 
 jz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
 ```
 
+<a name="array-reject" href="#array-reject">#</a> jz.arr.<b>reject</b>(<i>array</i>, <i>object</i>)
+
+Filters an array of objects to remove those objects that contain a specified key-value pair.
+
+```js
+var json = [ { value: 1, name: "Bob", age: 30 }, { value: 2, name: "Steve", age: 23 }, { value: 3, name: "John", age: 40 }, { value: 1, name: "Tim", age: 6 }, { value: 2, name: "Jake", age: 92 } ];
+jz.arr.reject(json, { value: 1, name: "Steve" }); // [ { value: 3, name: 'John', age: 40 }, { value: 2, name: 'Jake', age: 92 } ]
+jz.arr.reject(json, { age: 40 }); // [ { value: 1, name: 'Bob', age: 30 }, { value: 2, name: 'Steve', age: 23 }, { value: 1, name: 'Tim', age: 6 }, { value: 2, name: 'Jake', age: 92 } ]
+```
+
 <a name="array-removeProperty" href="#array-removeProperty">#</a> jz.arr.<b>removeProperty</b>(<i>array</i>, <i>property string OR array of property strings</i>)
 
 Removes a property or properties from every object in an array of objects. The second argument can be a string or, if you want to remove multiple properties, an array of strings.
@@ -161,6 +171,26 @@ Sorts an array of numbers in ascending order by default. For descending order, p
 
 Returns unique values of an array.
 
+<a name="array-uniqueBy" href="#array-uniqueBy">#</a> jz.arr.<b>uniqueBy</b>(<i>array</i>, <i>string</i>)
+
+Returns a sorted array of unique values of an object property in an array of objects.
+
+```js
+var json = [ { value: 1, name: "Bob" }, { value: 2, name: "Steve" }, { value: 3, name: "John" }, { value: 1, name: "Tim" }, { value: 2, name: "Jake" } ];
+jz.arr.uniqueBy(json, "age"); // [ 6, 23, 30, 40, 92 ]
+jz.arr.uniqueBy(json, "name"); // [ "Bob", "Jake", "John", "Steve", "Tim" ]
+jz.arr.arrays.uniqueBy(json, "value"); // [ 1, 2, 3 ]
+```
+
+<a name="array-where" href="#array-where">#</a> jz.arr.<b>where</b>(<i>array</i>, <i>object</i>)
+
+Filters an array of objects to return only those objects that contain a specified key-value pair.
+
+```js
+var json = [ { value: 1, name: "Bob", age: 30 }, { value: 2, name: "Steve", age: 23 }, { value: 3, name: "John", age: 40 }, { value: 1, name: "Tim", age: 6 }, { value: 2, name: "Jake", age: 92 } ];
+jz.arr.where(json, { value: 2, name: "Steve" }); // [ { value: 2, name: "Steve", age: 23 } ]
+jz.arr.where(json, { value: 1 }); // [ { value: 1, name: "Bob", age: 30 }, { value: 1, name: "Tim", age: 6 } ]
+```
 
 ### <a name="array-other" href="#array-other">Arrays: Other</a>
 

@@ -17,11 +17,42 @@ var testTitle = "new rules grant F.B.I., DEA & CIA access to 'raw' NSA surveilla
 var testTitle0 = "this is a title: and this is a subtitle" ;
 var testTitle1 = "M'ADOO F.B.I ARRANGES TOUR OF THE WEST TO PUSH THE LOAN; Plans Strong Appeals to Patriotism to Loosen Nation's...";
 
+
+console.log(u);
+
 describe("#array", function() {
 
 	/*
 	/ ARRAY TESTS
 	*/
+
+	it ("should return a sorted array of unique values of an object property in an array of objects", function(){
+		var t = arrays.uniqueBy(json, "age");
+		var u = arrays.uniqueBy(json, "name");
+		var x = arrays.uniqueBy(json, "value");
+		expect(t.length).to.equal(5);
+		expect(t[0]).to.equal(6);
+		expect(u[u.length - 1]).to.equal("Tim");
+		expect(x.length).to.equal(3);
+	});
+
+	it ("should return only objects in arrays that match a key-value pair", function(){
+		var t = arrays.where(json, {value: 1});
+		var u = arrays.where(json, {value: 2, name: "Steve"});
+		var x = arrays.where(json, {age: 40});
+		expect(t.length).to.equal(2);
+		expect(u.length).to.equal(1);
+		expect(x.length).to.equal(1);		
+	});
+
+	it ("should reject objects from arrays", function(){
+		var t = arrays.reject(json, {value: 1});
+		var u = arrays.reject(json, {value: 1, name: "Steve"});
+		var x = arrays.reject(json, {age: 40});
+		expect(t.length).to.equal(3);
+		expect(u.length).to.equal(2);
+		expect(x.length).to.equal(4);
+	});
 
 	it("should delete a property or properties from every object in an array of objects", function(){
 		var a = arrays.removeProperty(json, "name");
