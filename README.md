@@ -126,6 +126,10 @@ jz.arr.reject(json, { value: 1, name: "Steve" }); // [ { value: 3, name: 'John',
 jz.arr.reject(json, { age: 40 }); // [ { value: 1, name: 'Bob', age: 30 }, { value: 2, name: 'Steve', age: 23 }, { value: 1, name: 'Tim', age: 6 }, { value: 2, name: 'Jake', age: 92 } ]
 ```
 
+<a name="array-removeItem" href="#array-removeItem">#</a> jz.arr.<b>removeItem</b>(<i>array</i>, <i>item</i>)
+
+Removes an item from an array, and returns the array.
+
 <a name="array-removeProperty" href="#array-removeProperty">#</a> jz.arr.<b>removeProperty</b>(<i>array</i>, <i>property string OR array of property strings</i>)
 
 Removes a property or properties from every object in an array of objects. The second argument can be a string or, if you want to remove multiple properties, an array of strings.
@@ -199,6 +203,10 @@ Miscellaneous array functions.
 <a name="array-random" href="#array-random">#</a> jz.arr.<b>random</b>(<i>array</i>)
 
 Returns a random item from an array.
+
+<a name="array-shallowCopy" href="#array-shallowCopy">#</a> jz.arr.<b>shallowCopy</b>(<i>array</i>)
+
+Returns a shallow copy of an array.
 
 ---
 

@@ -23,6 +23,18 @@ describe("#array", function() {
 	/ ARRAY TESTS
 	*/
 
+	it ("should remove an item from an array", function(){
+		var t = arrays.removeItem(arr, 1);
+		expect(t[0]).to.equal(2);
+		expect(t.length).to.equal(arr.length - 1);
+	});
+
+	it ("should clone an array", function(){
+		var clone = arrays.shallowCopy(arr);
+		expect(clone[0]).to.equal(arr[0]);
+		expect(clone.length).to.equal(arr.length);
+	});
+
 	it ("should return a sorted array of unique values of an object property in an array of objects", function(){
 		var t = arrays.uniqueBy(json, "age");
 		var u = arrays.uniqueBy(json, "name");
