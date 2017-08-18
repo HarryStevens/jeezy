@@ -36,6 +36,7 @@ Javascript has many [built-in methods for manipulating arrays](https://developer
 
 ### Numbers
 Javascript has many [built-in methods for manipulating numbers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number). These functions are meant to supplement those.
+* [Numbers: Queries](#number-queries)
 * [Numbers: Other](#number-other)
 
 ### Strings
@@ -209,6 +210,14 @@ Returns a random item from an array.
 Returns a shallow copy of an array.
 
 ---
+
+### <a name="number-queries" href="#number-queries">Numbers: Queries</a>
+
+Functions for testing numbers for certain properties.
+
+<a name="number-isEven" href="#number-isEven">#</a> jz.num.<b>isEven</b>(<i>integer</i>)
+
+Tests whether an integer is even.
 
 ### <a name="number-other" href="#number-other">Numbers: Other</a>
 

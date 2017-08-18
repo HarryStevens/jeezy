@@ -175,6 +175,11 @@ describe("#number", function(){
   / NUMBER TESTS
   */
 
+  it("should test whether an integer is even", function(){
+  	expect(num.isEven(1)).to.equal(false);
+  	expect(num.isEven(2)).to.equal(true);
+  });
+
   it("should generate a random number between two specified numbers", function(){
   	var a = num.randBetween(10, 100);
   	expect(a).to.be.at.least(10);
