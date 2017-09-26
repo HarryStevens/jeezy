@@ -45,6 +45,7 @@ Javascript has many [built-in methods for manipulating strings](https://develope
 * [Strings: Numbers](#string-numbers)
 * [Strings: Queries](#string-queries)
 * [Strings: Transformations](#string-transformations)
+* [Strings: Other](#string-other)
 
 ---
 
@@ -496,6 +497,11 @@ Randomly shuffles the characters of each word, but keeps the words in order. Use
 
 Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
 
+### <a name="string-other" href="#string-other">Strings: Other</a>
+
+<a name="string-randomString" href="#string-randomString">#</a> jz.str.<b>randomString</b>(<i>n</i>)
+
+Creates a string of randomized characters of `n` length. If `n` is not specified, the string will be 5 characters lonng.
 
 ## Tests
 ```bash

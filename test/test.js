@@ -426,4 +426,12 @@ describe("#string", function(){
     expect(ah6).to.equal("This Is a Title: And This Is a Subtitle")
   });	
 
+  it("should output a random string of n length", function(){
+  	var ai0 = strings.randomString();
+  	var ai1 = strings.randomString(20);
+
+  	expect(ai0.length).to.equal(5);
+  	expect(ai1.length).to.equal(20);
+  });
+
 });
