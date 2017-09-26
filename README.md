@@ -501,7 +501,7 @@ Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.
 
 <a name="string-randomString" href="#string-randomString">#</a> jz.str.<b>randomString</b>(<i>n</i>)
 
-Creates a string of randomized characters of `n` length. If `n` is not specified, the string will be 5 characters lonng.
+Creates a string of randomized characters of `n` length. If `n` is not specified, the string will be 5 characters long.
 
 ## Tests
 ```bash
