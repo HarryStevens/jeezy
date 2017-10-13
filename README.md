@@ -347,6 +347,10 @@ jz.str.firstLetter("!!Hello world!"); // "H"
 jz.str.firstLetter("!"); // null
 ```
 
+<a name="string-hasDigit" href="#string-hasDigit">#</a> jz.str.<b>hasDigit</b>(<i>string</i>)
+
+Tests whether a string contains any digits.
+
 <a name="string-includes" href="#string-includes">#</a> jz.str.<b>includes</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
 
 Tests whether a string includes a substring. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.

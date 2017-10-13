@@ -434,4 +434,17 @@ describe("#string", function(){
   	expect(ai1.length).to.equal(20);
   });
 
+  it("should test if a string has any digits", function(){
+  	var ah0 = strings.hasDigit("abc");
+  	var ah1 = strings.hasDigit("a1c");
+  	var ah2 = strings.hasDigit("123");
+  	var ah3 = strings.hasDigit("!@#$");
+
+  	expect(ah0).to.equal(false);
+  	expect(ah1).to.equal(true);
+  	expect(ah2).to.equal(true);
+  	expect(ah3).to.equal(false);
+
+  });
+
 });
