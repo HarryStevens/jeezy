@@ -486,7 +486,7 @@ npm run cover # Test and run a coverage report
 
 ## Contributing
 
-jeezy uses [rollup](https://rollupjs.org/) to bundle several small modules, usually containing just one function, into a library. To add a function, create a file in the appropriate subdirectory within the [`src` directory](https://github.com/HarryStevens/jeezy/tree/master/src), export it from [`arrays.js`](https://github.com/HarryStevens/jeezy/blob/master/src/arr/arrays.js), [`numbers.js`](https://github.com/HarryStevens/jeezy/blob/master/src/num/numbers.js), or [`strings.js`](https://github.com/HarryStevens/jeezy/blob/master/src/str/strings.js). 
+jeezy uses [rollup](https://rollupjs.org/) to bundle several small modules, usually containing just one function, into a library. To add a function, create a file in the appropriate subdirectory within the [`src` directory](https://github.com/HarryStevens/jeezy/tree/master/src), and then export it from [`arrays.js`](https://github.com/HarryStevens/jeezy/blob/master/src/arr/arrays.js), [`numbers.js`](https://github.com/HarryStevens/jeezy/blob/master/src/num/numbers.js), or [`strings.js`](https://github.com/HarryStevens/jeezy/blob/master/src/str/strings.js). 
 
 To bundle the library:
 ```bash
