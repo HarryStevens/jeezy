@@ -1,5 +1,7 @@
-# jeezy [![Build Status](https://travis-ci.org/HarryStevens/jeezy.svg?branch=master)](https://travis-ci.org/HarryStevens/jeezy) [![Coverage Status](https://coveralls.io/repos/github/HarryStevens/jeezy/badge.svg?branch=master)](https://coveralls.io/github/HarryStevens/jeezy?branch=master)
+# jeezy
 JavaScript. Easy.
+
+[![Build Status](https://travis-ci.org/HarryStevens/jeezy.svg?branch=master)](https://travis-ci.org/HarryStevens/jeezy) [![Coverage Status](https://coveralls.io/repos/github/HarryStevens/jeezy/badge.svg?branch=master)](https://coveralls.io/github/HarryStevens/jeezy?branch=master)
 
 <b>jeezy</b> is a JavaScript library for manipulating data. It provides lots of useful functions and has no dependencies, so it won't add a lot of code to your project.
 
