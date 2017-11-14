@@ -14,7 +14,8 @@ var jz = require("jeezy");
 ```
 
 ### Web browser
-You can use the CDN from unpkg.
+
+In vanilla, a `jz` global is exported. You can use the CDN from unpkg.
 ```html
 <script src="https://unpkg.com/jeezy/lib/jeezy.js"></script>
 <script src="https://unpkg.com/jeezy/lib/jeezy.min.js"></script>
