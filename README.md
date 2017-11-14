@@ -291,7 +291,7 @@ Adds commas to a number string for thousands, lakhs, crores, and so on. This is 
 <a name="string-numberPrepend" href="#string-numberPrepend">#</a> jz.str.<b>numberPrepend</b>(<i>string</i>, <i>number</i>, <i>prepend_character</i>)
 
 Adds a `prepend_character` before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already the same length or longer than the number of characters.
-If you do not specify a `prepend_character`, it defaults to zero. If you specify a `prepend_character` of length greater than one, it uses just the first character.
+If you do not specify a `prepend_character`, it defaults to `"0"`. If you specify a `prepend_character` of length greater than one, it uses just the first character.
 ```js
 jz.str.numberPrepend("1234", 6); // "001234"
 ```
