@@ -478,32 +478,20 @@ Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.
 Creates a string of randomized characters of `n` length. If `n` is not specified, the string will be 5 characters long.
 
 ## Tests
-```bash
-npm test
+
+``` bash
+npm test # Test
+npm run cover # Test and run a coverage report:
 ```
 
 ## Contributing
 
-jeezy uses [rollup](https://rollupjs.org/) to bundle several functions into a single file. To add a function, create a file in the appropriate subdirectory within the [`src` directory](https://github.com/HarryStevens/jeezy/tree/master/src), export it from [`arrays.js`](https://github.com/HarryStevens/jeezy/blob/master/src/arr/arrays.js), [`numbers.js`](https://github.com/HarryStevens/jeezy/blob/master/src/num/numbers.js), or [`strings.js`](https://github.com/HarryStevens/jeezy/blob/master/src/str/strings.js). 
+jeezy uses [rollup](https://rollupjs.org/) to bundle several small modules, usually containing just one function, into a library. To add a function, create a file in the appropriate subdirectory within the [`src` directory](https://github.com/HarryStevens/jeezy/tree/master/src), export it from [`arrays.js`](https://github.com/HarryStevens/jeezy/blob/master/src/arr/arrays.js), [`numbers.js`](https://github.com/HarryStevens/jeezy/blob/master/src/num/numbers.js), or [`strings.js`](https://github.com/HarryStevens/jeezy/blob/master/src/str/strings.js). 
 
-To bundle the library, run:
+To bundle the library:
 ```bash
-npm run rollup
-```
-
-To bundle and minify it, run:
-```bash
-npm run build
-```
-
-To test the library, run:
-```
-npm test
-```
-
-To test it and run a coverage report, run:
-```
-npm run cover
+npm run rollup # Bundle
+npm run build # Bundle and minify
 ```
 
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality.
