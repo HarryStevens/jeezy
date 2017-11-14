@@ -481,7 +481,7 @@ Creates a string of randomized characters of `n` length. If `n` is not specified
 
 ``` bash
 npm test # Test
-npm run cover # Test and run a coverage report:
+npm run cover # Test and run a coverage report
 ```
 
 ## Contributing
