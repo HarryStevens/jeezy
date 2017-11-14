@@ -3,7 +3,12 @@ JavaScript. Easy.
 
 <b>jeezy</b> is a JavaScript library for manipulating data. It provides lots of useful functions and has no dependencies, so it won't add a lot of code to your project.
 
-## Installation
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Contributing](#contributing)
+
+## <a name="installation" href="#installation">Installation</a>
 
 ### npm
 ```bash
@@ -26,7 +31,7 @@ If you'd rather host it yourself, download `jeezy.js` or `jeezy.min.js` from the
 <script src="path/to/jeezy.min.js"></script>
 ```
 
-## Usage
+## <a name="usage" href="#usage">Usage</a>
 
 ### Arrays
 Javascript has many [built-in methods for manipulating arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). These functions are meant to supplement those.
@@ -477,14 +482,14 @@ Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.
 
 Creates a string of randomized characters of `n` length. If `n` is not specified, the string will be 5 characters long.
 
-## Tests
+## <a name="tests" href="#tests">Tests</a>
 
 ``` bash
 npm test # Test
 npm run cover # Test and run a coverage report
 ```
 
-## Contributing
+## <a name="contributing" href="#contributing">Contributing</a>
 
 jeezy uses [rollup](https://rollupjs.org/) to bundle several small modules, usually containing just one function, into a library. To add a function, create a file in the appropriate subdirectory within the [`src` directory](https://github.com/HarryStevens/jeezy/tree/master/src), and then export it from [`arrays.js`](https://github.com/HarryStevens/jeezy/blob/master/src/arr/arrays.js), [`numbers.js`](https://github.com/HarryStevens/jeezy/blob/master/src/num/numbers.js), or [`strings.js`](https://github.com/HarryStevens/jeezy/blob/master/src/str/strings.js). 
 
