@@ -118,16 +118,6 @@ var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 
 jz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
 ```
 
-<a name="array-reject" href="#array-reject">#</a> jz.arr.<b>reject</b>(<i>array</i>, <i>object</i>)
-
-Filters an array of objects to remove those objects that contain a specified key-value pair.
-
-```js
-var json = [ { value: 1, name: "Bob", age: 30 }, { value: 2, name: "Steve", age: 23 }, { value: 3, name: "John", age: 40 }, { value: 1, name: "Tim", age: 6 }, { value: 2, name: "Jake", age: 92 } ];
-jz.arr.reject(json, { value: 1, name: "Steve" }); // [ { value: 3, name: 'John', age: 40 }, { value: 2, name: 'Jake', age: 92 } ]
-jz.arr.reject(json, { age: 40 }); // [ { value: 1, name: 'Bob', age: 30 }, { value: 2, name: 'Steve', age: 23 }, { value: 1, name: 'Tim', age: 6 }, { value: 2, name: 'Jake', age: 92 } ]
-```
-
 <a name="array-removeItem" href="#array-removeItem">#</a> jz.arr.<b>removeItem</b>(<i>array</i>, <i>item</i>)
 
 Removes an item from an array, and returns the array.
@@ -157,18 +147,6 @@ jz.arr.sortBy(json, "count", "asc"); // [ { value: "c", count: 1 }, { value: "a"
 jz.arr.sortBy(json, "count", "desc"); // [ { value: "b", count: 2 }, { value: "a", count: 2 }, { value: "c", count: 1 } ]
 ```
 
-<a name="array-sortByMulti" href="#array-sortByMulti">#</a> jz.arr.<b>sortByMulti</b>(<i>array</i>, <i>array</i>)
-
-Sorts an array of objects by the values of multiple attributes. Pass the list of attributes as an array, and the function will execute the sorts in order. You can specify the order of a sort as descending or ascending by passing an array instead of a string, where the first item is the attribute and the second is the order, either "desc" or "asc".
-
-```js
-var json = [ { value: 1, name: "Bob" }, { value: 2, name: "Steve" }, { value: 3, name: "John" }, { value: 1, name: "Tim" }, { value: 2, name: "Jake" } ];
-jz.arr.sortByMulti(json, ["name", ["value", "desc"]]); // [ { value: 3, name: 'John' }, { value: 2, name: 'Jake' }, { value: 2, name: 'Steve' }, { value: 1, name: 'Tim' }, { value: 1, name: 'Bob' } ]
-// This will have the same output as:
-// var output = jz.arr.sortBy(json, "name");
-// output = jz.arr.sortBy(json, "value", "desc");
-```
-
 <a name="array-sortNumbers" href="#array-sortNumbers">#</a> jz.arr.<b>sortNumbers</b>(<i>array</i>[, <i>order</i>])
 
 Sorts an array of numbers in ascending order by default. For descending order, pass "desc" as <i>order</i>.
@@ -186,16 +164,6 @@ var json = [ { value: 1, name: "Bob" }, { value: 2, name: "Steve" }, { value: 3,
 jz.arr.uniqueBy(json, "age"); // [ 6, 23, 30, 40, 92 ]
 jz.arr.uniqueBy(json, "name"); // [ "Bob", "Jake", "John", "Steve", "Tim" ]
 jz.arr.arrays.uniqueBy(json, "value"); // [ 1, 2, 3 ]
-```
-
-<a name="array-where" href="#array-where">#</a> jz.arr.<b>where</b>(<i>array</i>, <i>object</i>)
-
-Filters an array of objects to return only those objects that contain a specified key-value pair.
-
-```js
-var json = [ { value: 1, name: "Bob", age: 30 }, { value: 2, name: "Steve", age: 23 }, { value: 3, name: "John", age: 40 }, { value: 1, name: "Tim", age: 6 }, { value: 2, name: "Jake", age: 92 } ];
-jz.arr.where(json, { value: 2, name: "Steve" }); // [ { value: 2, name: "Steve", age: 23 } ]
-jz.arr.where(json, { value: 1 }); // [ { value: 1, name: "Bob", age: 30 }, { value: 1, name: "Tim", age: 6 } ]
 ```
 
 ### <a name="array-other" href="#array-other">Arrays: Other</a>
@@ -312,11 +280,12 @@ jz.str.numberDecimals("1.235", 2); // "1.24"
 
 Adds commas to a number string for thousands, lakhs, crores, and so on. This is according to the [Indian numbering system](https://en.wikipedia.org/wiki/Indian_numbering_system).
 
-<a name="string-numberPrependZeros" href="#string-numberPrependZeros">#</a> jz.str.<b>numberPrependZeros</b>(<i>string</i>, <i>number</i>)
+<a name="string-numberPrepend" href="#string-numberPrepend">#</a> jz.str.<b>numberPrepend</b>(<i>string</i>, <i>number</i>, <i>prepend_character</i>)
 
-Adds zeros before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already the same length or longer than the number of characters.
+Adds a `prepend_character` before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already the same length or longer than the number of characters.
+If you do not specify a `prepend_character`, it defaults to zero. If you specify a `prepend_character` of length greater than one, it uses just the first character.
 ```js
-jz.str.numberPrependZeros("1234", 6); // "001234"
+jz.str.numberPrepend("1234", 6); // "001234"
 ```
 
 ### <a name="string-queries" href="#string-queries">Strings: Queries</a>

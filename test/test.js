@@ -45,36 +45,29 @@ describe("#array", function() {
 		expect(x.length).to.equal(3);
 	});
 
-	it ("should return only objects in arrays that match a key-value pair", function(){
-		var t = arrays.where(json, {value: 1});
-		var u = arrays.where(json, {value: 2, name: "Steve"});
-		var x = arrays.where(json, {age: 40});
-		expect(t.length).to.equal(2);
-		expect(u.length).to.equal(1);
-		expect(x.length).to.equal(1);		
-	});
+	// it ("should return only objects in arrays that match a key-value pair", function(){
+	// 	var t = arrays.where(json, {value: 1});
+	// 	var u = arrays.where(json, {value: 2, name: "Steve"});
+	// 	var x = arrays.where(json, {age: 40});
+	// 	expect(t.length).to.equal(2);
+	// 	expect(u.length).to.equal(1);
+	// 	expect(x.length).to.equal(1);		
+	// });
 
-	it ("should reject objects from arrays", function(){
-		var t = arrays.reject(json, {value: 1});
-		var u = arrays.reject(json, {value: 1, name: "Steve"});
-		var x = arrays.reject(json, {age: 40});
-		expect(t.length).to.equal(3);
-		expect(u.length).to.equal(2);
-		expect(x.length).to.equal(4);
-	});
+	// it ("should reject objects from arrays", function(){
+	// 	var t = arrays.reject(json, {value: 1});
+	// 	var u = arrays.reject(json, {value: 1, name: "Steve"});
+	// 	var x = arrays.reject(json, {age: 40});
+	// 	expect(t.length).to.equal(3);
+	// 	expect(u.length).to.equal(2);
+	// 	expect(x.length).to.equal(4);
+	// });
 
 	it("should delete a property or properties from every object in an array of objects", function(){
 		var a = arrays.removeProperty(json, "name");
 		var b = arrays.removeProperty(json, ["name", "age"])
 		expect(a[0].name).to.equal(undefined);
 		expect(b[0].age).to.equal(undefined);
-	});
-
-	it("should sort by multiple attributes", function(){
-		var sort = arrays.sortByMulti(json, ["name", ["value", "desc"]]);
-		expect(sort[0].value).to.equal(3);
-		expect(sort[1].name).to.equal("Jake");
-		expect(sort[2].name).to.equal("Steve");
 	});
 
 	it("should sort an array of objects by the values of an attribute", function(){
@@ -288,18 +281,22 @@ describe("#string", function(){
   });
 
   it("should prepend zeros to a string until it is n digits long, unless it is already as long or longer", function(){
-  	var m0 = strings.numberPrependZeros(1234, 4); // "1234"
-		var m1 = strings.numberPrependZeros(123, 4); // "0123"
-		var m2 = strings.numberPrependZeros(12345, 4); // "12345"
-		var m3 = strings.numberPrependZeros(1, 4); // "0001"
-		var m4 = strings.numberPrependZeros("", 4); // "0000"
-		var m5 = strings.numberPrependZeros("red", 4); // "0red"
+  	var m0 = strings.numberPrepend(1234, 4); // "1234"
+		var m1 = strings.numberPrepend(123, 4); // "0123"
+		var m2 = strings.numberPrepend(12345, 4); // "12345"
+		var m3 = strings.numberPrepend(1, 4); // "0001"
+		var m4 = strings.numberPrepend("", 4); // "0000"
+		var m5 = strings.numberPrepend("red", 4); // "0red"
+		var m6 = strings.numberPrepend("red", 4, "a"); // "0red"
+		var m7 = strings.numberPrepend("red", 4, "ab"); // "0red"
 		expect(m0).to.equal("1234");
 		expect(m1).to.equal("0123");
 		expect(m2).to.equal("12345");
 		expect(m3).to.equal("0001");
 		expect(m4).to.equal("0000");
 		expect(m5).to.equal("0red");
+		expect(m6).to.equal("ared");
+		expect(m7).to.equal("ared");
   });
 
   it("should remove all of a specified character", function(){

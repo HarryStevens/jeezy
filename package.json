@@ -6,7 +6,9 @@
   "scripts": {
     "test": "mocha --reporter spec",
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
-    "minify": "uglifyjs lib/jeezy.js --comments -c -m -o lib/jeezy.min.js"
+    "minify": "uglifyjs lib/jeezy.js --preamble \"$(preamble)\" -c -m -o lib/jeezy.min.js",
+    "rollup": "rm -rf lib && mkdir lib && rollup --banner \"$(preamble)\" index.js --output.format umd --name 'jz' --output.file lib/jeezy.js",
+    "build": "npm run rollup && npm run minify"
   },
   "repository": {
     "type": "git",
@@ -15,7 +17,10 @@
   "keywords": [
     "JavaScript"
   ],
-  "author": "Harry Stevens <harryjosephstevens@gmail.com> (http://harryjstevens.com/)",
+  "author": {
+    "name": "Harry Stevens",
+    "url": "https://harryjstevens.com/"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/HarryStevens/jeezy/issues"
@@ -29,6 +34,8 @@
     "coveralls": "^2.13.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
+    "package-preamble": "^0.1.0",
+    "rollup": "^0.51.3",
     "uglifyjs": "^2.4.11"
   },
   "directories": {
