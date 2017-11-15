@@ -486,7 +486,7 @@ Creates a string of randomized characters of `n` length. If `n` is not specified
 
 ## <a name="tests" href="#tests">Tests</a>
 
-``` bash
+```bash
 npm test # Test
 npm run cover # Test and run a coverage report
 ```
