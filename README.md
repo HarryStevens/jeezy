@@ -288,6 +288,10 @@ jz.str.numberDecimals("1.235", 2); // "1.24"
 
 Adds commas to a number string for thousands, lakhs, crores, and so on. This is according to the [Indian numbering system](https://en.wikipedia.org/wiki/Indian_numbering_system).
 
+<a name="string-numberOrdinal" href="#string-numberOrdinal">#</a> jz.str.<b>numberOrdinal</b>(<i>string</i>)
+
+Returns an ordinal number (1st, 2nd, 3rd, 4th, ...).
+
 <a name="string-numberPrepend" href="#string-numberPrepend">#</a> jz.str.<b>numberPrepend</b>(<i>string</i>, <i>number</i>, <i>prepend_character</i>)
 
 Adds a `prepend_character` before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already the same length or longer than the number of characters.
