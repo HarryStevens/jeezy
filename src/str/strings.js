@@ -10,6 +10,7 @@ import toTitleCase from "./cases/toTitleCase"
 import numberCommas from "./numbers/numberCommas"
 import numberDecimals from "./numbers/numberDecimals"
 import numberLakhs from "./numbers/numberLakhs"
+import numberOrdinal from "./numbers/numberOrdinal"
 import numberPrepend from "./numbers/numberPrepend"
 
 // queries
@@ -63,6 +64,7 @@ export default {
 	numberCommas: numberCommas,
 	numberDecimals: numberDecimals,
 	numberLakhs: numberLakhs,
+	numberOrdinal: numberOrdinal,
 	numberPrepend: numberPrepend,
 	randomString: randomString,
 	removeAll: removeAll,

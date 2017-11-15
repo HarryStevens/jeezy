@@ -187,6 +187,23 @@ describe("#string", function(){
 	/ STRING TESTS
 	*/
 
+	it("should return an ordinal number", function(){
+		expect(strings.numberOrdinal(1)).to.equal("1st");
+		expect(strings.numberOrdinal(2)).to.equal("2nd");
+		expect(strings.numberOrdinal(3)).to.equal("3rd");
+		expect(strings.numberOrdinal(4)).to.equal("4th");
+		expect(strings.numberOrdinal(11)).to.equal("11th");
+		expect(strings.numberOrdinal(12)).to.equal("12th");
+		expect(strings.numberOrdinal(13)).to.equal("13th");
+		expect(strings.numberOrdinal(101)).to.equal("101st");
+		expect(strings.numberOrdinal(102)).to.equal("102nd");
+		expect(strings.numberOrdinal(103)).to.equal("103rd");
+		expect(strings.numberOrdinal(104)).to.equal("104th");
+		expect(strings.numberOrdinal(111)).to.equal("111th");
+		expect(strings.numberOrdinal(112)).to.equal("112th");
+		expect(strings.numberOrdinal(113)).to.equal("113th");
+	});
+
 	it("should return the first letter of a string", function(){
 		expect(strings.firstLetter("Hello world!")).to.equal("H");
 		expect(strings.firstLetter("!!Hello world!")).to.equal("H");
