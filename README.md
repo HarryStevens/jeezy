@@ -108,6 +108,10 @@ var arrays = [[1],[2],[3]];
 jz.arr.flatten(arrays); // [1, 2, 3]
 ```
 
+<a name="array-merge" href="#array-merge">#</a> jz.arr.<b>merge</b>(<i>array1</i>, <i>array2</i>, <i>property</i>)
+
+Merges two arrays of objects on a specified property. Keeps each object of the first array, and adds the matching properties of the first matched object in the second array.
+
 <a name="array-pivot" href="#array-pivot">#</a> jz.arr.<b>pivot</b>(<i>array</i>, <i>string</i>)
 
 Pivots an array of objects around the unique values of an attribute. Returns the unique values and the count of how many times each appears in the original array.

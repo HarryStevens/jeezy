@@ -11,6 +11,7 @@ import isArray from "./queries/isArray"
 
 // transformations
 import flatten from "./transformations/flatten"
+import merge from "./transformations/merge"
 import pivot from "./transformations/pivot"
 import pluck from "./transformations/pluck"
 import removeItem from "./transformations/removeItem"
@@ -32,6 +33,7 @@ export default {
 	is: isArray,
 	max: max,
 	median: median,
+	merge: merge,
 	min: min,
 	pivot: pivot,
 	pluck: pluck,

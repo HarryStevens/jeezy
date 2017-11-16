@@ -23,6 +23,20 @@ describe("#array", function() {
 	/ ARRAY TESTS
 	*/
 
+	it("should merge two arrays on a matching property", function(){
+		var arr1 = [{name: "Bob", home: "Texas"}, {name: "Steve", home: "London"}];
+		var merged = arrays.merge(arr1, json, "name");
+		expect(merged[0].age).to.equal(30);
+	});
+
+	it("should catch an error if the matching property is not in the first array", function(){
+		expect(function(){ arrays.merge(arr1, json, "value") }).to.throw(Error);
+	});
+
+	it("should catch an error if the matching property is not in the second array", function(){
+		expect(function(){ arrays.merge(arr1, json, "home") }).to.throw(Error);
+	});
+
 	it ("should remove an item from an array", function(){
 		var t = arrays.removeItem(arr, 1);
 		expect(t[0]).to.equal(2);
