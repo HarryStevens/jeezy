@@ -16,6 +16,7 @@ import pivot from "./transformations/pivot"
 import pluck from "./transformations/pluck"
 import removeItem from "./transformations/removeItem"
 import removeProperty from "./transformations/removeProperty"
+import renameProperty from "./transformations/renameProperty"
 import shuffle from "./transformations/shuffle"
 import sortBy from "./transformations/sortBy"
 import sortNumbers from "./transformations/sortNumbers"
@@ -23,11 +24,13 @@ import unique from "./transformations/unique"
 import uniqueBy from "./transformations/uniqueBy"
 
 // other
+import deepCopy from "./other/deepCopy"
 import random from "./other/random"
 import shallowCopy from "./other/shallowCopy"
 
 export default {
 	average: average,
+	deepCopy: deepCopy,
 	extent: extent,
 	flatten: flatten,
 	is: isArray,
@@ -39,6 +42,7 @@ export default {
 	pluck: pluck,
 	removeItem: removeItem,
 	removeProperty: removeProperty,
+	renameProperty: renameProperty,
 	random: random,
 	shallowCopy: shallowCopy,
 	shuffle: shuffle,

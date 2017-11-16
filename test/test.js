@@ -22,6 +22,13 @@ describe("#array", function() {
 	/*
 	/ ARRAY TESTS
 	*/
+	it("should return a deep copy of an array", function(){
+		expect(arrays.deepCopy(json)[0].value).to.equal(json[0].value);
+	})
+
+	it("should rename properties of an array", function(){
+		expect(arrays.renameProperty(json, {in: "value", out: "number"})[0].number).to.equal(json[0].value);
+	});
 
 	it("should merge two arrays on a matching property", function(){
 		var arr1 = [{name: "Bob", home: "Texas"}, {name: "Steve", home: "London"}];

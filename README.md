@@ -144,6 +144,16 @@ jz.arr.removeProperty(json, "age"); // [ { value: 1, name: "Bob" }, { value: 2, 
 jz.arr.removeProperty(json, ["value", "age"]); // [ { name: "Bob" }, { name: "Steve" }, { name: "John" }, { name: "Tim" }, { name: "Jake" } ]
 ```
 
+<a name="array-renameProperty" href="#array-renameProperty">#</a> jz.arr.<b>renameProperty</b>(<i>array</i>, <i>renamer</i>)
+
+Renames a property or properties in every object of an array of objects. You must pass a "renamer" as the second argument. If you are only renaming one property, the renamer can be an object with the properties "in", the value of which is a string with the input property name, and "out", the value of which is a string with the output property name. If you are renaming multiple properties, the renamer can be an array of objects, where each object has the "in" and "out" properties of the single renamer.
+
+```js
+var json = [ { value: 1, name: "Bob", age: 30 }, { value: 2, name: "Steve", age: 23 } ];
+jz.arr.renameProperty(json, {in: "value", out: "number"}) // [ { number: 1, name: "Bob", age: 30 }, { number: 2, name: "Steve", age: 23 } ];
+jz.arr.renameProperty(json, [{in: "value", out: "number"}, {in: "age", out: "shoes"}]); // [ { number: 1, name: "Bob", shoes: 30 }, { number: 2, name: "Steve", shoes: 23 } ];
+```
+
 <a name="array-shuffle" href="#array-shuffle">#</a> jz.arr.<b>shuffle</b>(<i>array</i>)
 
 Shuffles an array.
@@ -181,6 +191,10 @@ jz.arr.arrays.uniqueBy(json, "value"); // [ 1, 2, 3 ]
 ### <a name="array-other" href="#array-other">Arrays: Other</a>
 
 Miscellaneous array functions.
+
+<a name="array-deepCopy" href="#array-deepCopy">#</a> jz.arr.<b>deepCopy</b>(<i>array</i>)
+
+Returns a deep copy of an array.
 
 <a name="array-random" href="#array-random">#</a> jz.arr.<b>random</b>(<i>array</i>)
 
