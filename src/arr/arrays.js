@@ -10,6 +10,7 @@ import sum from "./math/sum"
 import isArray from "./queries/isArray"
 
 // transformations
+import columnsToValues from "./transformations/columnsToValues"
 import flatten from "./transformations/flatten"
 import merge from "./transformations/merge"
 import pivot from "./transformations/pivot"
@@ -30,6 +31,7 @@ import shallowCopy from "./other/shallowCopy"
 
 export default {
 	average: average,
+	columnsToValues: columnsToValues,
 	deepCopy: deepCopy,
 	extent: extent,
 	flatten: flatten,

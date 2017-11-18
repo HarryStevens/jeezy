@@ -22,9 +22,16 @@ describe("#array", function() {
 	/*
 	/ ARRAY TESTS
 	*/
+	it("should turn column names into values", function(){
+		var data = [{year: 2015, Bob: 6, Steve: 10}, {year: 2016, Bob: 7, Steve: 12}, {year: 2017, Bob: 4, Steve: 16}];
+		data = jz.arr.columnsToValues(data);
+		expect(data[0].column).to.equal("Bob");
+		expect(data.length).to.equal(6);
+	});
+
 	it("should return a deep copy of an array", function(){
 		expect(arrays.deepCopy(json)[0].value).to.equal(json[0].value);
-	})
+	});
 
 	it("should rename properties of an array", function(){
 		expect(arrays.renameProperty(json, {in: "value", out: "number"})[0].number).to.equal(json[0].value);

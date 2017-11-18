@@ -99,6 +99,24 @@ Tests whether an element is an array. Returns *true* or *false*.
 
 Functions for transforming arrays.
 
+<a name="array-columnsToValues" href="#array-columnsToValues">#</a> jz.arr.<b>columnsToValues</b>(<i>array</i>)
+
+Expands a two-dimensional array of objects in which the column names contain values.
+
+```js
+var data = [{year: 2015, Bob: 6, Steve: 10}, {year: 2016, Bob: 7, Steve: 12}, {year: 2017, Bob: 4, Steve: 16}];
+data = jz.arr.columnsToValues(data);
+/*
+[ { year: 2015, column: "Bob", value: 6 },
+  { year: 2016, column: "Bob", value: 7 },
+  { year: 2017, column: "Bob", value: 4 },
+  { year: 2015, column: "Steve", value: 10 },
+  { year: 2016, column: "Steve", value: 12 },
+  { year: 2017, column: "Steve", value: 16 } ]
+*/
+jz.arr.renameProperty(data, {in: "column", out: "first_name"});
+```
+
 <a name="array-flatten" href="#array-flatten">#</a> jz.arr.<b>flatten</b>(<i>array</i>)
 
 Flattens an array of arrays into a single array.
