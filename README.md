@@ -424,6 +424,14 @@ Keeps all instances of a substring in a string. Removes everything else. Returns
 
 Keeps a certain number of characters at the end of a string and removes the rest.
 
+<a name="string-keepNumber" href="#string-keepNumber">#</a> jz.str.<b>keepNumber</b>(<i>string</i>)
+
+Keeps only digits and periods in a string.
+
+```js
++jz.str.keepNumber("254.62px"); // 254.62
+```
+
 <a name="string-keepOne" href="#string-keepOne">#</a> jz.str.<b>keepOne</b>(<i>string</i>, <i>string</i>)
 
 Keeps one instance of a substring in a string, even if the substring appears multiple times. Removes everything else. Returns a blank string if the substring does not appear in the original string.

@@ -27,6 +27,7 @@ import startsWith from "./queries/startsWith"
 // transformations
 import keepAll from "./transformations/keepAll"
 import keepEnd from "./transformations/keepEnd"
+import keepNumber from "./transformations/keepNumber"
 import keepOne from "./transformations/keepOne"
 import keepStart from "./transformations/keepStart"
 import removeAll from "./transformations/removeAll"
@@ -59,6 +60,7 @@ export default {
 	isAllLower: isAllLower,
 	keepAll: keepAll,
 	keepEnd: keepEnd,
+	keepNumber: keepNumber,
 	keepOne: keepOne,
 	keepStart: keepStart,
 	numberCommas: numberCommas,

@@ -215,6 +215,10 @@ describe("#string", function(){
 	/ STRING TESTS
 	*/
 
+	it("should just keep a number", function(){
+		expect(strings.keepNumber("154.36px")).to.equal("154.36");
+	});
+
 	it("should return an ordinal number", function(){
 		expect(strings.numberOrdinal(1)).to.equal("1st");
 		expect(strings.numberOrdinal(2)).to.equal("2nd");
