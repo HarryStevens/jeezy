@@ -148,6 +148,10 @@ var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 
 jz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
 ```
 
+<a name="array-propertyToNumber" href="#array-propertyToNumber">#</a> jz.arr.<b>propertyToNumber</b>(<i>data</i>, <i>string OR array of strings</i>)
+
+Coerces the type of a property to a number in every object in an array of objects. The second argument can be a string with a single property name, or an array of strings with one or more property names.
+
 <a name="array-removeItem" href="#array-removeItem">#</a> jz.arr.<b>removeItem</b>(<i>array</i>, <i>item</i>)
 
 Removes an item from an array, and returns the array.

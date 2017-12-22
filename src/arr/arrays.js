@@ -15,6 +15,7 @@ import flatten from "./transformations/flatten"
 import merge from "./transformations/merge"
 import pivot from "./transformations/pivot"
 import pluck from "./transformations/pluck"
+import propertyToNumber from "./transformations/propertyToNumber"
 import removeItem from "./transformations/removeItem"
 import removeProperty from "./transformations/removeProperty"
 import renameProperty from "./transformations/renameProperty"
@@ -42,6 +43,7 @@ export default {
 	min: min,
 	pivot: pivot,
 	pluck: pluck,
+	propertyToNumber: propertyToNumber,
 	removeItem: removeItem,
 	removeProperty: removeProperty,
 	renameProperty: renameProperty,

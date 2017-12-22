@@ -22,6 +22,25 @@ describe("#array", function() {
 	/*
 	/ ARRAY TESTS
 	*/
+	it("should coerce the value of a property to a number in each object of an array of objects", function(){
+		var data = [{day: "10", month: "1", year: "2017"}, {day: "12", month: "1", year: "2017"}];
+		data = jz.arr.propertyToNumber(data, "day");
+		expect(data[0].day).to.equal(10);
+		expect(data[1].day).to.equal(12);
+		expect(data[0].month).to.equal("1");
+		data = jz.arr.propertyToNumber(data, ["month", "year"]);
+		expect(data[0].month).to.equal(1);
+		expect(data[0].year).to.equal(2017);
+		expect(data[1].month).to.equal(1);
+		expect(data[1].year).to.equal(2017);
+
+		expect(function(){ jz.arr.propertyToNumber() }).to.throw(Error);
+		expect(function(){ jz.arr.propertyToNumber(data) }).to.throw(Error);
+		expect(function(){ jz.arr.propertyToNumber("hello", "world") }).to.throw(Error);
+		expect(function(){ jz.arr.propertyToNumber(data, 3) }).to.throw(Error);
+		expect(function(){ jz.arr.propertyToNumber(data, [3]) }).to.throw(Error);
+	});
+
 	it("should turn column names into values", function(){
 		var data = [{year: 2015, Bob: 6, Steve: 10}, {year: 2016, Bob: 7, Steve: 12}, {year: 2017, Bob: 4, Steve: 16}];
 		data = jz.arr.columnsToValues(data);
