@@ -67,7 +67,7 @@ Returns the average of an array of numbers.
 
 <a name="array-correlationMatrix" href="#array-correlationMatrix">#</a> jz.arr.<b>correlationMatrix</b>(<i>data</i>, <i>columns</i>)
 
-Given a <em>data</em> set (an array of objects) and a list of <em>columns</em> (an array with a list of numeric columns), calculate the Pearson correlation coeffient for each pair of columns and return a correlation matrix, which is an array of objects where each object takes the form `{column_a: string, column_a: string, correlation: number}`.
+Given a <em>data</em> set (an array of objects) and a list of <em>columns</em> (an array with a list of numeric columns), calculate the Pearson correlation coeffient for each pair of columns and return a correlation matrix, which is an array of objects where each object takes the form `{column_a: String, column_b: String, correlation: Number}`.
 
 <a name="array-extent" href="#array-extent">#</a> jz.arr.<b>extent</b>(<i>array</i>)
 
