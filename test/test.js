@@ -22,6 +22,31 @@ describe("#array", function() {
 	/*
 	/ ARRAY TESTS
 	*/
+	it("should calculate a correlation matrix", function(){
+		var data = [];
+		var cols = "abcdefghijklmnopqrstuvwxyz".split("");
+		for (var i = 0; i <= 30; i++){
+		  var obj = {index: i};
+		  cols.forEach(col => {
+		    obj[col] = jz.num.randBetween(1, 100);
+		  });
+		  data.push(obj);
+		}
+		var corr = jz.arr.correlationMatrix(data, cols);
+
+		expect(corr.length).to.equal(676);
+		expect(corr.length).to.equal(cols.length * cols.length);
+		expect(corr[0].column_x).to.equal("a");
+		expect(corr[0].correlation).to.equal(1);
+
+		// errors
+		expect(function(){ jz.arr.correlationMatrix() }).to.throw(Error);
+		expect(function(){ jz.arr.correlationMatrix(data) }).to.throw(Error);
+		expect(function(){ jz.arr.correlationMatrix("data") }).to.throw(Error);
+		expect(function(){ jz.arr.correlationMatrix(data, "columns") }).to.throw(Error);
+
+	});
+
 	it("should coerce the value of a property to a number in each object of an array of objects", function(){
 		var data = [{day: "10", month: "1", year: "2017"}, {day: "12", month: "1", year: "2017"}];
 		data = jz.arr.propertyToNumber(data, "day");

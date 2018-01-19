@@ -1,5 +1,6 @@
 // math
 import average from "./math/average"
+import correlationMatrix from "./math/correlationMatrix"
 import extent from "./math/extent"
 import max from "./math/max"
 import median from "./math/median"
@@ -33,6 +34,7 @@ import shallowCopy from "./other/shallowCopy"
 export default {
 	average: average,
 	columnsToValues: columnsToValues,
+	correlationMatrix: correlationMatrix,
 	deepCopy: deepCopy,
 	extent: extent,
 	flatten: flatten,
