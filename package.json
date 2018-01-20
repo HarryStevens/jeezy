@@ -1,6 +1,6 @@
 {
   "name": "jeezy",
-  "version": "1.12.11",
+  "version": "1.12.12",
   "description": "JavaScript. Easy.",
   "main": "lib/jeezy.js",
   "scripts": {
