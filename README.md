@@ -192,7 +192,7 @@ jz.arr.renameProperty(json, [{in: "value", out: "number"}, {in: "age", out: "sho
 
 Shuffles an array.
 
-<a name="array-sortBy" href="#array-sortBy">#</a> jz.arr.<b>sortBy</b>(<i>array</i>[, order])
+<a name="array-sortBy" href="#array-sortBy">#</a> jz.arr.<b>sortBy</b>(<i>array</i>[, <i>order</i>])
 
 Sorts an array of objects by the values of an attribute. You can specify the order of the sort as descending or ascending by using "desc" or "asc" as the optional third argument. If there is no third argument, the sort order defaults to ascending.
 
