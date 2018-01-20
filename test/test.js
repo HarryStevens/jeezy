@@ -59,11 +59,26 @@ describe("#array", function() {
 		expect(data[1].month).to.equal(1);
 		expect(data[1].year).to.equal(2017);
 
+		// coerce function tests
+		var data2 = [{year: "2017x"}];
+		data2 = jz.arr.propertyToNumber(data2, "year", function(d){ return 0; });
+		expect(data2[0].year).to.equal(0);
+
+		var data3 = [{year: "2017x"}];
+		data3 = jz.arr.propertyToNumber(data3, "year", function(d){ return jz.str.keepNumber(d); });
+		expect(data3[0].year).to.equal(2017);
+
+		var data4 = [{year: "2017x"}];
+		data4 = jz.arr.propertyToNumber(data4, "year", function(d){ return "X"; });
+		expect(isNaN(data4[0].year)).to.equal(true);
+	
+		// errors
 		expect(function(){ jz.arr.propertyToNumber() }).to.throw(Error);
 		expect(function(){ jz.arr.propertyToNumber(data) }).to.throw(Error);
 		expect(function(){ jz.arr.propertyToNumber("hello", "world") }).to.throw(Error);
 		expect(function(){ jz.arr.propertyToNumber(data, 3) }).to.throw(Error);
 		expect(function(){ jz.arr.propertyToNumber(data, [3]) }).to.throw(Error);
+		expect(function(){ jz.arr.propertyToNumber(data, "month", "x") }).to.throw(Error);
 	});
 
 	it("should turn column names into values", function(){

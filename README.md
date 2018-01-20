@@ -152,9 +152,17 @@ var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 
 jz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
 ```
 
-<a name="array-propertyToNumber" href="#array-propertyToNumber">#</a> jz.arr.<b>propertyToNumber</b>(<i>data</i>, <i>string OR array of strings</i>)
+<a name="array-propertyToNumber" href="#array-propertyToNumber">#</a> jz.arr.<b>propertyToNumber</b>(<i>data</i>, <i>string OR array of strings</i> [, <i>coerce function</i>])
 
 Coerces the type of a property to a number in every object in an array of objects. The second argument can be a string with a single property name, or an array of strings with one or more property names.
+
+By default, non-numeric values will be converted to `NaN`. But you can pass an optional third argument – a <i>coerce function</i> to decide how to deal with non-numeric values. However, if the function you pass returns a non-numeric value, that value will itself be coerced to `NaN`.
+
+Examples of coerce functions are:
+```js
+function(d){ return jz.str.keepNumbers(d); }
+function(d){ return 0; }
+```
 
 <a name="array-removeItem" href="#array-removeItem">#</a> jz.arr.<b>removeItem</b>(<i>array</i>, <i>item</i>)
 
