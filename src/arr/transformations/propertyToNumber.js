@@ -28,6 +28,9 @@ export default function propertyToNumber(data, prop, coerce){
 		throw new Error("The third argument must be a function.");
 	}
 
+	// did a coercing function get passed
+	coerce = coerce ? coerce : function(){ return NaN; }
+
 	// if the second argument is an array
 	if (is(prop)){
 		data.forEach(function(d, i){

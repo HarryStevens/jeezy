@@ -64,6 +64,10 @@ describe("#array", function() {
 		data2 = jz.arr.propertyToNumber(data2, "year", function(d){ return 0; });
 		expect(data2[0].year).to.equal(0);
 
+		var data2a = [{year: "2017x"}];
+		data2a = jz.arr.propertyToNumber(data2a, "year");
+		expect(isNaN(data2a[0].year)).to.equal(true);
+
 		var data3 = [{year: "2017x"}];
 		data3 = jz.arr.propertyToNumber(data3, "year", function(d){ return jz.str.keepNumber(d); });
 		expect(data3[0].year).to.equal(2017);
