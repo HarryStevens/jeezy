@@ -42,7 +42,7 @@ describe("#array", function() {
 		// errors
 		expect(function(){ jz.arr.correlationMatrix() }).to.throw(Error);
 		expect(function(){ jz.arr.correlationMatrix(data) }).to.throw(Error);
-		expect(function(){ jz.arr.correlationMatrix("data") }).to.throw(Error);
+		expect(function(){ jz.arr.correlationMatrix("data", cols) }).to.throw(Error);
 		expect(function(){ jz.arr.correlationMatrix(data, "columns") }).to.throw(Error);
 
 	});
