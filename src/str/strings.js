@@ -48,6 +48,9 @@ import shuffleWords from "./transformations/shuffleWords"
 
 // other
 import randomString from "./other/randomString"
+import splitAfterFirst from "./other/splitAfterFirst"
+import splitAfterLast from "./other/splitAfterLast"
+import splitAtIndex from "./other/splitAtIndex"
 
 export default {
 	count: count,
@@ -84,6 +87,9 @@ export default {
 	shuffleCharacters: shuffleCharacters,
 	shuffleCharactersInWords: shuffleCharactersInWords,
 	shuffleWords: shuffleWords,
+	splitAfterFirst: splitAfterFirst,
+	splitAfterLast: splitAfterLast,
+	splitAtIndex: splitAtIndex,
 	startsWith: startsWith,
 	toCamelCase: toCamelCase,
 	toSentenceCase: toSentenceCase,

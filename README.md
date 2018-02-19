@@ -548,6 +548,35 @@ Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.
 
 Creates a string of randomized characters of `n` length. If `n` is not specified, the string will be 5 characters long.
 
+<a name="string-splitAfterFirst" href="#string-splitAfterFirst">#</a> jz.str.<b>splitAfterFirst</b>(<i>string</i>, <i>char</i>)
+
+Split a string at the first instance of a character or a sequence of characters (`char`). Returns an array with two items. The first item is everything that came before `char`, while the second item is everything that came after. `char` itself is removed.
+
+```js
+jz.str.splitAfterFirst("Hello world", "o"); // ["Hell", " world"]
+jz.str.splitAfterFirst("Good morning world", "or"); // ["Good m", "ning world"]
+jz.str.splitAfterFirst("Hello world", "x"); // ["Hello world", ""]
+```
+
+<a name="string-splitAfterLast" href="#string-splitAfterLast">#</a> jz.str.<b>splitAfterLast</b>(<i>string</i>, <i>char</i>)
+
+Split a string at the last instance of a character or a sequence of characters (`char`). Returns an array with two items. The first item is everything that came before `char`, while the second item is everything that came after. `char` itself is removed.
+
+```js
+jz.str.splitAfterLast("Hello world", "o"); // ["Hello w", "rld"]
+jz.str.splitAfterLast("Good morning world", "or"); // ["Good morning w", "ld"]
+jz.str.splitAfterLast("Hello world", "x"); // ["Hello world", ""]
+```
+
+<a name="string-splitAtIndex" href="#string-splitAtIndex">#</a> jz.str.<b>splitAtIndex</b>(<i>string</i>, <i>number OR array of numbers</i>)
+
+Split a string at a numerical index or at each index in an array of numerical indices.
+
+```js
+jz.str.splitAtIndex("Hello world", "Hello world".length - 1); // ["Hello worl", "d"]
+jz.str.splitAtIndex("Hello world", [1, "Hello world".length - 1]); // ["H", "ello worl", "d"]
+```
+
 ## <a name="tests" href="#tests">Tests</a>
 
 ```bash
