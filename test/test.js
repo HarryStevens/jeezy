@@ -256,6 +256,10 @@ describe("#string", function(){
 	/*
 	/ STRING TESTS
 	*/
+	it("should turn a string into an acronym", function(){
+		expect(jz.str.acronym("Central Intelligence Agency")).to.equal("CIA");
+		expect(jz.str.acronym("None of the Above")).to.equal("NotA");
+	});
 
 	it("should split a string at the first instance of a character or sequence of charaters", function(){
 		var a = jz.str.splitAfterFirst("Hello world", "o"); // ["Hell", " world"]

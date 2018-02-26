@@ -25,6 +25,7 @@ import isAllLower from "./queries/isAllLower"
 import startsWith from "./queries/startsWith"
 
 // transformations
+import acronym from "./transformations/acronym"
 import keepAll from "./transformations/keepAll"
 import keepEnd from "./transformations/keepEnd"
 import keepNumber from "./transformations/keepNumber"
@@ -53,6 +54,7 @@ import splitAfterLast from "./other/splitAfterLast"
 import splitAtIndex from "./other/splitAtIndex"
 
 export default {
+	acronym: acronym,
 	count: count,
 	endsWith: endsWith,
 	firstLetter: firstLetter,

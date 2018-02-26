@@ -216,7 +216,7 @@ Returns unique values of an array.
 Returns a sorted array of unique values of an object property in an array of objects.
 
 ```js
-var json = [ { value: 1, name: "Bob" }, { value: 2, name: "Steve" }, { value: 3, name: "John" }, { value: 1, name: "Tim" }, { value: 2, name: "Jake" } ];
+var json = [ { value: 1, name: "Bob", age: 6}, { value: 2, name: "Steve", age: 6}, { value: 3, name: "John", age: 6}, { value: 1, name: "Tim", age: 23}, { value: 2, name: "Jake", age: 30}, { value: 3, name: "John", age: 40}, { value: 1, name: "Tim", age: 92} ];
 jz.arr.uniqueBy(json, "age"); // [ 6, 23, 30, 40, 92 ]
 jz.arr.uniqueBy(json, "name"); // [ "Bob", "Jake", "John", "Steve", "Tim" ]
 jz.arr.arrays.uniqueBy(json, "value"); // [ 1, 2, 3 ]
@@ -431,6 +431,10 @@ jz.str.startsWith("Hello world", "he", false); // false
 ### <a name="string-transformations" href="#string-transformations">Strings: Transformations</a>
 
 Functions for applying various transformations to strings.
+
+<a name="string-acronym" href="#string-acronym">#</a> jz.str.<b>acronym</b>(<i>string</i>)
+
+Turns a string into an acronym.
 
 <a name="string-keepAll" href="#string-keepAll">#</a> jz.str.<b>keepAll</b>(<i>string</i>, <i>substring</i>)
 

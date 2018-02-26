@@ -5,9 +5,8 @@ import unique from "./unique"
 // Dependencies: pluck, unique
 export default function pivot(arr, attribute){
   return unique(pluck(arr, attribute)).sort().map(function(d){ 
-    return {
-      value: d,
-      count: arr.filter(function(e){ return e[attribute] == d; }).length
-    }
+  	var obj = {count : arr.filter(function(e){ return e[attribute] == d; }).length};
+  	obj[attribute] = d;
+    return obj;
   });
 }
