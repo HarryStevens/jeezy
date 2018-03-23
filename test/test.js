@@ -256,6 +256,12 @@ describe("#string", function(){
 	/*
 	/ STRING TESTS
 	*/
+	it("should test whether a character is uppercase", function(){
+		expect(jz.str.isUpperCase("C")).to.equal(true);
+		expect(jz.str.isUpperCase("d")).to.equal(false);
+		expect(jz.str.isUpperCase(1)).to.equal(false);
+	});
+
 	it("should turn a string into an acronym", function(){
 		expect(jz.str.acronym("Central Intelligence Agency")).to.equal("CIA");
 		expect(jz.str.acronym("None of the Above")).to.equal("NotA");

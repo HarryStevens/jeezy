@@ -22,6 +22,7 @@ import includes from "./queries/includes"
 import isAllCaps from "./queries/isAllCaps"
 import isAllDigits from "./queries/isAllDigits"
 import isAllLower from "./queries/isAllLower"
+import isUpperCase from "./queries/isUpperCase"
 import startsWith from "./queries/startsWith"
 
 // transformations
@@ -63,6 +64,7 @@ export default {
 	isAllCaps: isAllCaps,
 	isAllDigits: isAllDigits,
 	isAllLower: isAllLower,
+	isUpperCase: isUpperCase,
 	keepAll: keepAll,
 	keepEnd: keepEnd,
 	keepNumber: keepNumber,

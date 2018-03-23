@@ -418,6 +418,10 @@ jz.str.isAllLower("jee-zy"); // true
 jz.str.isAllLower("Jeezy"); // false
 ```
 
+<a name="string-isUpperCase" href="#string-isUpperCase">#</a> jz.str.<b>isUpperCase</b>(<i>character</i>)
+
+Tests whether a character is upper case.
+
 <a name="string-startsWith" href="#string-startsWith">#</a> jz.str.<b>startsWith</b>(<i>string</i>, <i>substring</i>[, <i>boolean</i>])
 
 Tests whether a string starts with a substring. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
