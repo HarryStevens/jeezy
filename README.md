@@ -160,7 +160,7 @@ By default, non-numeric values will be converted to `NaN`. But you can pass an o
 
 Examples of coerce functions are:
 ```js
-function(d){ return jz.str.keepNumbers(d); }
+function(d){ return jz.str.keepNumber(d); }
 function(d){ return 0; }
 ```
 
