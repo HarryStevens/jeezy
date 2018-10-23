@@ -145,11 +145,12 @@ jz.arr.pivot(json, "value"); // [ { value: 1, count: 2 }, { value: 2, count: 2 }
 
 <a name="array-pluck" href="#array-pluck">#</a> jz.arr.<b>pluck</b>(<i>array</i>, <i>string</i>)
 
-Returns all the values of a specified attribute from an array of objects.
+Returns all the values of a specified attribute or mapping function from an array of objects.
 
 ```js
 var json = [ { value: 1 }, { value: 2 }, { value: 3 }, { value: 1 }, { value: 2 } ];
 jz.arr.pluck(json, "value"); // [1, 2, 3, 1, 2]
+jz.arr.pluck(json, function(d){ return d.value + 1; }); // [2, 3, 4, 2, 3]
 ```
 
 <a name="array-propertyToNumber" href="#array-propertyToNumber">#</a> jz.arr.<b>propertyToNumber</b>(<i>data</i>, <i>string OR array of strings</i> [, <i>coerce function</i>])
@@ -213,13 +214,14 @@ Returns unique values of an array.
 
 <a name="array-uniqueBy" href="#array-uniqueBy">#</a> jz.arr.<b>uniqueBy</b>(<i>array</i>, <i>string</i>)
 
-Returns a sorted array of unique values of an object property in an array of objects.
+Returns an array of unique values of an object property or mapping function in an array of objects.
 
 ```js
 var json = [ { value: 1, name: "Bob", age: 6}, { value: 2, name: "Steve", age: 6}, { value: 3, name: "John", age: 6}, { value: 1, name: "Tim", age: 23}, { value: 2, name: "Jake", age: 30}, { value: 3, name: "John", age: 40}, { value: 1, name: "Tim", age: 92} ];
 jz.arr.uniqueBy(json, "age"); // [ 6, 23, 30, 40, 92 ]
-jz.arr.uniqueBy(json, "name"); // [ "Bob", "Jake", "John", "Steve", "Tim" ]
-jz.arr.arrays.uniqueBy(json, "value"); // [ 1, 2, 3 ]
+jz.arr.uniqueBy(json, "name"); // [ "Bob", "Steve", "John", "Tim", "Jake" ]
+jz.arr.uniqueBy(json, "value"); // [ 1, 2, 3 ]
+jz.arr.uniqueBy(json, function(d){ return d.value + 1; }); // [2, 3, 4]
 ```
 
 ### <a name="array-other" href="#array-other">Arrays: Other</a>

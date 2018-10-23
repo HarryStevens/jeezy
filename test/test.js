@@ -123,13 +123,13 @@ describe("#array", function() {
 		expect(clone.length).to.equal(arr.length);
 	});
 
-	it ("should return a sorted array of unique values of an object property in an array of objects", function(){
+	it ("should return an array of unique values of an object property in an array of objects", function(){
 		var t = jz.arr.uniqueBy(json, "age");
 		var u = jz.arr.uniqueBy(json, "name");
 		var x = jz.arr.uniqueBy(json, "value");
 		expect(t.length).to.equal(5);
-		expect(t[0]).to.equal(6);
-		expect(u[u.length - 1]).to.equal("Tim");
+		expect(t[0]).to.equal(30);
+		expect(u[u.length - 1]).to.equal("Jake");
 		expect(x.length).to.equal(3);
 	});
 
@@ -169,6 +169,12 @@ describe("#array", function() {
 		expect(t.length).to.equal(5);
 		expect(t[2]).to.equal(3);
 	});
+
+  it("should pluck values based on a mapper from an array of objects", function(){
+    var t = jz.arr.pluck(json, function(d){ return d.value + 1; });
+    expect(t.length).to.equal(5);
+    expect(t[2]).to.equal(4);
+  });
 
 	it("should return unique values of an array", function(){
 		var a = jz.arr.unique([1,2,4,2,3,6,1,5]);
