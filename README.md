@@ -24,8 +24,8 @@ var jz = require("jeezy");
 
 In vanilla, a `jz` global is exported. You can use the CDN from unpkg.
 ```html
-<script src="https://unpkg.com/jeezy/lib/jeezy.js"></script>
-<script src="https://unpkg.com/jeezy/lib/jeezy.min.js"></script>
+<script src="https://unpkg.com/jeezy@1.13.1/lib/jeezy.js"></script>
+<script src="https://unpkg.com/jeezy@1.13.1/lib/jeezy.min.js"></script>
 ```
 If you'd rather host it yourself, download `jeezy.js` or `jeezy.min.js` from the [`lib` directory](https://github.com/HarryStevens/jeezy/tree/master/lib).
 ```html
@@ -195,7 +195,7 @@ Shuffles an array.
 
 <a name="array-sortBy" href="#array-sortBy">#</a> jz.arr.<b>sortBy</b>(<i>array</i>[, <i>order</i>])
 
-Sorts an array of objects by the values of an attribute. You can specify the order of the sort as descending or ascending by using "desc" or "asc" as the optional third argument. If there is no third argument, the sort order defaults to ascending.
+Sorts an array of objects by the values of an attribute. The attribute can be either a string representing a property in each object, or an accessor modifying each object. You can specify the order of the sort as descending or ascending by using "desc" or "asc" as the optional third argument. If there is no third argument, the sort order defaults to ascending.
 
 ```js
 var json = [ { value: "a", count: 2 }, { value: "b", count: 2 }, { value: "c", count: 1 } ]

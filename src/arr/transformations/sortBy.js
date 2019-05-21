@@ -1,16 +1,21 @@
 // Sorts an array of objects by the values of an attribute
 export default function sortBy(arr, attribute, order){
   var d = arr.slice();
-  var numSort = d.every(function(d){ return typeof d[attribute] == "number" });
-  var a = [];
+  var fnSort = typeof attribute === "function";
+  function resolve(d){
+    return fnSort ? attribute(d) : d[attribute]; 
+  }
+  var numSort = d.every(function(d){ return typeof resolve(d) === "number" });
+  var out = [];
   if (numSort){
-    a = d.sort(function(a, b) {
-      return a[attribute] - b[attribute];
+    out = d.sort(function(a, b) {
+      return resolve(a) - resolve(b);
     });  
   } else {
-    a = d.sort(function(a, b){
-      return a[attribute] < b[attribute] ? -1 : a[attribute] > b[attribute] ? 1 : 0
+    out = d.sort(function(a, b){
+      var ar = resolve(a), br = resolve(b);
+      return ar < br ? -1 : ar > br ? 1 : 0;
     });
   }
-  return order == "desc" ? a.reverse() : a;
+  return order === "desc" ? out.reverse() : out;
 }
