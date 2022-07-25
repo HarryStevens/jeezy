@@ -92,7 +92,7 @@ Returns the sum of an array of numbers.
 
 ### <a name="array-queries" href="#array-queries">Arrays: Queries</a>
 
-Functions for testing arrays for certain properties. Return booleans.
+Functions for testing arrays for certain properties. Return [booleans](https://www.scaler.com/topics/boolean-in-javascript/).
 
 <a name="array-is" href="#array-is">#</a> jz.arr.<b>is</b>(<i>array</i>)
 
